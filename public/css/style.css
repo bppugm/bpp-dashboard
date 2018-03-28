@@ -14,9 +14,13 @@
 }
 
 #Header-nav{
-    background: linear-gradient(135deg, #00599a 3%, #2199e8 100%);
+    background: #073c64 !important;
     box-shadow: 0px 3px 5px grey;
     /*justify-content: initial;*/
+}
+
+.bg-blue-ugm {
+    background: #073c64 !important;
 }
 
 #title-case{

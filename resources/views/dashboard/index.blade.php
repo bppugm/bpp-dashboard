@@ -21,7 +21,7 @@
     <title>BPP UGM Achievement from Minutes to Minutes</title>
   </head>
   <body style="background: #eee; color: rgb(72, 72, 72);">
-    <nav class="navbar navbar-dark bg-light" id="Header-nav">
+    <nav class="navbar navbar-dark bg-blue-ugm has-shadow">
       <div class="d-flex flex-wrap align-content-center" id="left-side--navbar">
         <div class="d-flex align-items-center" id="title-case-div">
           <h4 class="text-white m-0 py-2">BPP UGM's Achievements Minute by Minute</h4>
@@ -36,7 +36,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>122</h3>
+              <h3>{{ $data->article_scopus }}</h3>
               <span class="text-muted">Journal articles indexed in Scopus</span>
             </div>
           </div>
@@ -47,7 +47,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>66</h3>
+              <h3>{{ $data->proceeding_scopus }}</h3>
               <span class="text-muted">Proceedings indexed in Scopus</span>
             </div>
           </div>
@@ -58,7 +58,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>181</h3>
+              <h3>{{ $data->article_other }}</h3>
               <span class="text-muted">Journal articles indexed in WoS, EBSCO, Microsoft Academic, and Pubmed</span>
             </div>
           </div>
@@ -69,7 +69,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>1</h3>
+              <h3>{{ $data->proceeding_other }}</h3>
               <span class="text-muted">Proceedings indexed in W0S, EBSCO, Microsoft Academic, and Pubmed</span>
             </div>
           </div>
@@ -80,7 +80,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>56031</h3>
+              <h3>{{ $data->citation_scopus }}</h3>
               <span class="text-muted">Citations on Scopus</span>
             </div>
           </div>
@@ -91,7 +91,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>28</h3>
+              <h3>{{ $data->book }}</h3>
               <span class="text-muted">Books published</span>
             </div>
           </div>
@@ -102,7 +102,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>45</h3>
+              <h3>{{ $data->copyright }}</h3>
               <span class="text-muted">Copyrights registered</span>
             </div>
           </div>
@@ -113,7 +113,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>2039/2793</h3>
+              <h3>{{ $data->sinta_account }}/{{ $data->total_staff }}</h3>
               <span class="text-muted">Verified Sinta accounts</span>
             </div>
           </div>
