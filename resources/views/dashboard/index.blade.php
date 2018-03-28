@@ -18,7 +18,7 @@
         line-height: 1.1;
       }
     </style>
-    <title>BPP UGM Dashboard</title>
+    <title>BPP UGM Achievement from Minutes to Minutes</title>
   </head>
   <body style="background: #eee; color: rgb(72, 72, 72);">
     <nav class="navbar navbar-dark bg-light" id="Header-nav">
