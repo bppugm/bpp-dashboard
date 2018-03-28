@@ -37,7 +37,18 @@
             </div>
             <div class="p-3">
               <h3>2000</h3>
-              <span class="text-muted">Article indexed by Scopus</span>
+              <span class="text-muted">Journal articles indexed by Scopus</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 my-2">
+          <div class="d-flex bg-light rounded h-100 has-shadow">
+            <div class="bg-primary p-4 text-white rounded-left d-flex align-items-center">
+              <i class="far fa-file-alt fa-5x align-middle"></i>
+            </div>
+            <div class="p-3">
+              <h3>2000</h3>
+              <span class="text-muted">Proceedings indexed by Scopus</span>
             </div>
           </div>
         </div>
@@ -48,7 +59,18 @@
             </div>
             <div class="p-3">
               <h3>1200</h3>
-              <span class="text-muted">Article indexed by WOS, Ebsco, Microsoft Academic, and Pubmed</span>
+              <span class="text-muted">Journal articles indexed by WOS, EBSCO, Microsoft Academic, and Pubmed</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 my-2">
+          <div class="d-flex bg-light rounded h-100 has-shadow">
+            <div class="bg-primary p-4 text-white rounded-left d-flex align-items-center">
+              <i class="far fa-file-alt fa-5x align-middle"></i>
+            </div>
+            <div class="p-3">
+              <h3>1200</h3>
+              <span class="text-muted">Proceedings indexed by WOS, EBSCO, Microsoft Academic, and Pubmed</span>
             </div>
           </div>
         </div>
@@ -59,18 +81,7 @@
             </div>
             <div class="p-3">
               <h3>560</h3>
-              <span class="text-muted">Books published</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 my-2">
-          <div class="d-flex bg-light rounded h-100 has-shadow">
-            <div class="bg-primary p-4 text-white rounded-left d-flex align-items-center">
-              <i class="far fa-file-alt fa-5x align-middle"></i>
-            </div>
-            <div class="p-3">
-              <h3>422</h3>
-              <span class="text-muted">Hak cipta terdaftar</span>
+              <span class="text-muted">Citation count on Scopus</span>
             </div>
           </div>
         </div>
@@ -81,7 +92,7 @@
             </div>
             <div class="p-3">
               <h3>1523</h3>
-              <span class="text-muted">Citations count on Scopus</span>
+              <span class="text-muted">Books published</span>
             </div>
           </div>
         </div>
@@ -92,7 +103,7 @@
             </div>
             <div class="p-3">
               <h3>1802</h3>
-              <span class="text-muted">Citations count on WOS, Ebsco, Microsoft Academic, and Pubmed</span>
+              <span class="text-muted">Copyright registered</span>
             </div>
           </div>
         </div>
@@ -104,17 +115,6 @@
             <div class="p-3">
               <h3>80%</h3>
               <span class="text-muted">Verified Sinta Accounts</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 my-2">
-          <div class="d-flex bg-light rounded h-100 has-shadow">
-            <div class="bg-primary p-4 text-white rounded-left d-flex align-items-center">
-              <i class="far fa-file-alt fa-5x align-middle"></i>
-            </div>
-            <div class="p-3">
-              <h3>2000</h3>
-              <span class="text-muted">Article indexed by WOS, Ebsco, Microsoft Academic, and Pubmed</span>
             </div>
           </div>
         </div>
