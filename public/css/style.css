@@ -109,3 +109,8 @@
 .has-shadow {
     box-shadow: 0px 1px 3px grey;
 }
+
+.data-number {
+    font-weight: 600;
+    color: #073c64 !important;
+}

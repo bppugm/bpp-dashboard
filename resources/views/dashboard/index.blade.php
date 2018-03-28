@@ -32,88 +32,88 @@
       <div class="row align-items-center">
         <div class="col-md-6 my-2">
           <div class="d-flex bg-light rounded h-100 has-shadow">
-            <div class="bg-primary p-4 text-white rounded-left d-flex align-items-center">
+            <div class="bg-blue-ugm p-4 text-white rounded-left d-flex align-items-center">
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>{{ $data->article_scopus }}</h3>
+              <h2 class="data-number">{{ $data->article_scopus }}</h2>
               <span class="text-muted">Journal articles indexed in Scopus</span>
             </div>
           </div>
         </div>
         <div class="col-md-6 my-2">
           <div class="d-flex bg-light rounded h-100 has-shadow">
-            <div class="bg-primary p-4 text-white rounded-left d-flex align-items-center">
+            <div class="bg-blue-ugm p-4 text-white rounded-left d-flex align-items-center">
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>{{ $data->proceeding_scopus }}</h3>
+              <h2 class="data-number">{{ $data->proceeding_scopus }}</h2>
               <span class="text-muted">Proceedings indexed in Scopus</span>
             </div>
           </div>
         </div>
         <div class="col-md-6 my-2">
           <div class="d-flex bg-light rounded h-100 has-shadow">
-            <div class="bg-primary p-4 text-white rounded-left d-flex align-items-center">
+            <div class="bg-blue-ugm p-4 text-white rounded-left d-flex align-items-center">
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>{{ $data->article_other }}</h3>
+              <h2 class="data-number">{{ $data->article_other }}</h2>
               <span class="text-muted">Journal articles indexed in WoS, EBSCO, Microsoft Academic, and Pubmed</span>
             </div>
           </div>
         </div>
         <div class="col-md-6 my-2">
           <div class="d-flex bg-light rounded h-100 has-shadow">
-            <div class="bg-primary p-4 text-white rounded-left d-flex align-items-center">
+            <div class="bg-blue-ugm p-4 text-white rounded-left d-flex align-items-center">
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>{{ $data->proceeding_other }}</h3>
+              <h2 class="data-number">{{ $data->proceeding_other }}</h2>
               <span class="text-muted">Proceedings indexed in W0S, EBSCO, Microsoft Academic, and Pubmed</span>
             </div>
           </div>
         </div>
         <div class="col-md-6 my-2">
           <div class="d-flex bg-light rounded h-100 has-shadow">
-            <div class="bg-primary p-4 text-white rounded-left d-flex align-items-center">
+            <div class="bg-blue-ugm p-4 text-white rounded-left d-flex align-items-center">
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>{{ $data->citation_scopus }}</h3>
+              <h2 class="data-number">{{ $data->citation_scopus }}</h2>
               <span class="text-muted">Citations on Scopus</span>
             </div>
           </div>
         </div>
         <div class="col-md-6 my-2">
           <div class="d-flex bg-light rounded h-100 has-shadow">
-            <div class="bg-primary p-4 text-white rounded-left d-flex align-items-center">
+            <div class="bg-blue-ugm p-4 text-white rounded-left d-flex align-items-center">
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>{{ $data->book }}</h3>
+              <h2 class="data-number">{{ $data->book }}</h2>
               <span class="text-muted">Books published</span>
             </div>
           </div>
         </div>
         <div class="col-md-6 my-2">
           <div class="d-flex bg-light rounded h-100 has-shadow">
-            <div class="bg-primary p-4 text-white rounded-left d-flex align-items-center">
+            <div class="bg-blue-ugm p-4 text-white rounded-left d-flex align-items-center">
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>{{ $data->copyright }}</h3>
+              <h2 class="data-number">{{ $data->copyright }}</h2>
               <span class="text-muted">Copyrights registered</span>
             </div>
           </div>
         </div>
         <div class="col-md-6 my-2">
           <div class="d-flex bg-light rounded h-100 has-shadow">
-            <div class="bg-primary p-4 text-white rounded-left d-flex align-items-center">
+            <div class="bg-blue-ugm p-4 text-white rounded-left d-flex align-items-center">
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>{{ $data->sinta_account }}/{{ $data->total_staff }}</h3>
+              <h2 class="data-number">{{ $data->sinta_account }}/{{ $data->total_staff }}</h2>
               <span class="text-muted">Verified Sinta accounts</span>
             </div>
           </div>
