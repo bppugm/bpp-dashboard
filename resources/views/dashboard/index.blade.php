@@ -24,7 +24,7 @@
     <nav class="navbar navbar-dark bg-light" id="Header-nav">
       <div class="d-flex flex-wrap align-content-center" id="left-side--navbar">
         <div class="d-flex align-items-center" id="title-case-div">
-          <h4 class="text-white m-0 py-2">UGM Publications From Minute to Minute</h4>
+          <h4 class="text-white m-0 py-2">BPP UGM Achievement from Minutes to Minutes</h4>
         </div>
       </div>
     </nav>
