@@ -36,7 +36,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>2000</h3>
+              <h3>122</h3>
               <span class="text-muted">Journal articles indexed by Scopus</span>
             </div>
           </div>
@@ -47,7 +47,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>2000</h3>
+              <h3>66</h3>
               <span class="text-muted">Proceedings indexed by Scopus</span>
             </div>
           </div>
@@ -59,7 +59,7 @@
             </div>
             <div class="p-3">
               <h3>1200</h3>
-              <span class="text-muted">Journal articles indexed by WOS, EBSCO, Microsoft Academic, and Pubmed</span>
+              <span class="text-muted">Journal articles indexed by WoS, EBSCO, Microsoft Academic, and Pubmed</span>
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@
             </div>
             <div class="p-3">
               <h3>1200</h3>
-              <span class="text-muted">Proceedings indexed by WOS, EBSCO, Microsoft Academic, and Pubmed</span>
+              <span class="text-muted">Proceedings indexed by W0S, EBSCO, Microsoft Academic, and Pubmed</span>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>560</h3>
+              <h3>56031</h3>
               <span class="text-muted">Citation count on Scopus</span>
             </div>
           </div>
@@ -91,7 +91,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>1523</h3>
+              <h3>28</h3>
               <span class="text-muted">Books published</span>
             </div>
           </div>
@@ -102,7 +102,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>1802</h3>
+              <h3>45</h3>
               <span class="text-muted">Copyright registered</span>
             </div>
           </div>
@@ -113,7 +113,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>80%</h3>
+              <h3>2039/2793</h3>
               <span class="text-muted">Verified Sinta Accounts</span>
             </div>
           </div>
