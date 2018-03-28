@@ -58,7 +58,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>1200</h3>
+              <h3>181</h3>
               <span class="text-muted">Journal articles indexed by WoS, EBSCO, Microsoft Academic, and Pubmed</span>
             </div>
           </div>
@@ -69,7 +69,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>1200</h3>
+              <h3>1</h3>
               <span class="text-muted">Proceedings indexed by W0S, EBSCO, Microsoft Academic, and Pubmed</span>
             </div>
           </div>
