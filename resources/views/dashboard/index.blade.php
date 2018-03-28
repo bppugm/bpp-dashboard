@@ -36,7 +36,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>2000</h3>
+              <h3>122</h3>
               <span class="text-muted">Article indexed by Scopus</span>
             </div>
           </div>
@@ -47,7 +47,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>1200</h3>
+              <h3>181</h3>
               <span class="text-muted">Article indexed by WOS, Ebsco, Microsoft Academic, and Pubmed</span>
             </div>
           </div>
@@ -58,7 +58,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>560</h3>
+              <h3>28</h3>
               <span class="text-muted">Books published</span>
             </div>
           </div>
@@ -69,7 +69,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>422</h3>
+              <h3>45</h3>
               <span class="text-muted">Hak cipta terdaftar</span>
             </div>
           </div>
@@ -80,7 +80,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>1523</h3>
+              <h3>8</h3>
               <span class="text-muted">Citations count on Scopus</span>
             </div>
           </div>
@@ -91,7 +91,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>1802</h3>
+              <h3>4</h3>
               <span class="text-muted">Citations count on WOS, Ebsco, Microsoft Academic, and Pubmed</span>
             </div>
           </div>
@@ -113,7 +113,7 @@
               <i class="far fa-file-alt fa-5x align-middle"></i>
             </div>
             <div class="p-3">
-              <h3>2000</h3>
+              <h3>181</h3>
               <span class="text-muted">Article indexed by WOS, Ebsco, Microsoft Academic, and Pubmed</span>
             </div>
           </div>
