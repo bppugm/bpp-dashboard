@@ -24,7 +24,7 @@
     <nav class="navbar navbar-dark bg-light" id="Header-nav">
       <div class="d-flex flex-wrap align-content-center" id="left-side--navbar">
         <div class="d-flex align-items-center" id="title-case-div">
-          <h4 class="text-white m-0 py-2">BPP UGM Achievement from Minutes to Minutes</h4>
+          <h4 class="text-white m-0 py-2">BPP UGM's Achievements Minute by Minute</h4>
         </div>
       </div>
     </nav>
@@ -37,7 +37,7 @@
             </div>
             <div class="p-3">
               <h3>122</h3>
-              <span class="text-muted">Journal articles indexed by Scopus</span>
+              <span class="text-muted">Journal articles indexed in Scopus</span>
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@
             </div>
             <div class="p-3">
               <h3>66</h3>
-              <span class="text-muted">Proceedings indexed by Scopus</span>
+              <span class="text-muted">Proceedings indexed in Scopus</span>
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@
             </div>
             <div class="p-3">
               <h3>181</h3>
-              <span class="text-muted">Journal articles indexed by WoS, EBSCO, Microsoft Academic, and Pubmed</span>
+              <span class="text-muted">Journal articles indexed in WoS, EBSCO, Microsoft Academic, and Pubmed</span>
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@
             </div>
             <div class="p-3">
               <h3>1</h3>
-              <span class="text-muted">Proceedings indexed by W0S, EBSCO, Microsoft Academic, and Pubmed</span>
+              <span class="text-muted">Proceedings indexed in W0S, EBSCO, Microsoft Academic, and Pubmed</span>
             </div>
           </div>
         </div>
@@ -81,7 +81,7 @@
             </div>
             <div class="p-3">
               <h3>56031</h3>
-              <span class="text-muted">Citation count on Scopus</span>
+              <span class="text-muted">Citations on Scopus</span>
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@
             </div>
             <div class="p-3">
               <h3>45</h3>
-              <span class="text-muted">Copyright registered</span>
+              <span class="text-muted">Copyrights registered</span>
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@
             </div>
             <div class="p-3">
               <h3>2039/2793</h3>
-              <span class="text-muted">Verified Sinta Accounts</span>
+              <span class="text-muted">Verified Sinta accounts</span>
             </div>
           </div>
         </div>
