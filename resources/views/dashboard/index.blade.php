@@ -18,32 +18,32 @@
     <title>Homepage - tabler.github.io - a responsive, flat and full featured admin template</title>
     <link rel="stylesheet" href="{{ url('/css/fontawesome-all.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
-    <script src="{{ url('/assets/js/require.min.js') }}"></script>
+    <script src="{{ url('/js/require.min.js') }}"></script>
     <script>
       requirejs.config({
           baseUrl: '.'
           });
     </script>
     <!-- Dashboard Core -->
-    <link href="{{ url('/assets/css/dashboard.css') }}" rel="stylesheet" />
-    <script src="{{ url('/assets/js/dashboard.js') }}"></script>
+    <link href="{{ url('/css/dashboard.css') }}" rel="stylesheet" />
+    <script src="{{ url('/js/dashboard.js') }}"></script>
     <!-- c3.js Charts Plugin -->
-    <link href="{{ url('/assets/plugins/charts-c3/plugin.css') }}" rel="stylesheet" />
-    <script src="{{ url('/assets/plugins/charts-c3/plugin.js') }}"></script>
+    <link href="{{ url('/plugins/charts-c3/plugin.css') }}" rel="stylesheet" />
+    <script src="{{ url('/plugins/charts-c3/plugin.js') }}"></script>
     <!-- Google Maps Plugin -->
-    <link href="{{ url('/assets/plugins/maps-google/plugin.css') }}" rel="stylesheet" />
-    <script src="{{ url('/assets/plugins/maps-google/plugin.js') }}"></script>
+    <link href="{{ url('/plugins/maps-google/plugin.css') }}" rel="stylesheet" />
+    <script src="{{ url('/plugins/maps-google/plugin.js') }}"></script>
     <!-- Input Mask Plugin -->
-    <script src="{{ url('/assets/plugins/input-mask/plugin.js') }}"></script>
+    <script src="{{ url('/plugins/input-mask/plugin.js') }}"></script>
 
-    <style type="text/css">
+{{--     <style type="text/css">
       .card {
         opacity: 0.8;
       }
-    </style>
+    </style> --}}
   </head>
   <body class="">
-    <div class="page" style="background: url('/{{ url('/assets/images/stocks/background.png') }}') center center fixed no-repeat; background-size: cover; padding: 2.5rem 1rem 0 1rem;">
+    <div class="page" style="background: url('{{ url('/images/stocks/background.png') }}') center center fixed no-repeat; background-size: cover; padding: 2.5rem 1rem 0 1rem;">
       <div class="page-main">
         <div class="page-content mt-0">
           <div class="container-fluid">
@@ -60,7 +60,7 @@
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
                       <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
-                      <img src="{{ url('/assets/images/icons/journal.svg') }}" width="70">
+                      <img src="{{ url('/images/icons/journal.svg') }}" width="70">
                     </div>
                     <div class="display-4 font-weight-bold mb-3 text-primary">62</div>
                     <div class="h5">Journal articles indexed in Scopus</div>
@@ -72,7 +72,7 @@
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
                       <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
-                      <img src="{{ url('/assets/images/icons/journal.svg') }}" width="70">
+                      <img src="{{ url('/images/icons/journal.svg') }}" width="70">
                     </div>
                     <div class="display-4 font-weight-bold mb-3 text-primary">62</div>
                     <div class="h5">Journal articles indexed in WoS, EBSCO, Microsoft Academic, and Pubmed</div>
@@ -84,7 +84,7 @@
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
                       <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
-                      <img src="{{ url('/assets/images/icons/proceeding.svg') }}" width="70">
+                      <img src="{{ url('/images/icons/proceeding.svg') }}" width="70">
                     </div>
                     <div class="display-4 font-weight-bold mb-3 text-teal">62</div>
                     <div class="h5">Proceedings indexed in Scopus</div>
@@ -96,7 +96,7 @@
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
                       <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
-                      <img src="{{ url('/assets/images/icons/proceeding.svg') }}" width="70">
+                      <img src="{{ url('/images/icons/proceeding.svg') }}" width="70">
                     </div>
                     <div class="display-4 font-weight-bold mb-3 text-teal">62</div>
                     <div class="h5">Proceedings indexed in WoS, EBSCO, Microsoft Academic, and Pubmed</div>
@@ -110,7 +110,7 @@
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
                       <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
-                      <img src="{{ url('/assets/images/icons/citation.svg') }}" width="70">
+                      <img src="{{ url('/images/icons/citation.svg') }}" width="70">
                     </div>
                     <div class="display-4 font-weight-bold mb-3 text-orange">62</div>
                     <div class="h5">Citations in Scopus</div>
@@ -122,7 +122,7 @@
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
                       <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
-                      <img src="{{ url('/assets/images/icons/book.svg') }}" width="70">
+                      <img src="{{ url('/images/icons/book.svg') }}" width="70">
                     </div>
                     <div class="display-4 font-weight-bold mb-3 text-red">62</div>
                     <div class="h5">Books published</div>
@@ -134,7 +134,7 @@
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
                       <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
-                      <img src="{{ url('/assets/images/icons/copyright.svg') }}" width="70">
+                      <img src="{{ url('/images/icons/copyright.svg') }}" width="70">
                     </div>
                     <div class="display-4 font-weight-bold mb-3 text-yellow">62</div>
                     <div class="h5">Copyrights registered</div>
@@ -146,7 +146,7 @@
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
                       <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
-                      <img src="{{ url('/assets/images/icons/account.svg') }}" width="70">
+                      <img src="{{ url('/images/icons/account.svg') }}" width="70">
                     </div>
                     <div class="display-4 font-weight-bold mb-3 text-success">62</div>
                     <div class="h5">Verified Sinta accounts</div>
