@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Content-Language" content="en" />
-    <meta name="msapplication-TileColor" content="#2d89ef">
-    <meta name="theme-color" content="#4188c9">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <link rel="icon" href="{{ url('/favicon.ico') }}" type="image/x-icon"/>
-    <link rel="shortcut icon" type="image/x-icon" href="{{ url('/favicon.ico') }}" />
+    
+    {{-- FAVICONS --}}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{url('favicons/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{url('favicons/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{url('favicons/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{url('favicons/site.webmanifest')}}">
+    <link rel="mask-icon" href="{{url('favicons/safari-pinned-tab.svg')}}" color="#5bbad5">
+    <link rel="shortcut icon" href="{{url('favicons/favicon.ico')}}">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="{{url('favicons/browserconfig.xml')}}">
+    <meta name="theme-color" content="#ffffff">
+
+
     <!-- Generated: 2018-03-27 13:25:03 +0200 -->
-    <title>Homepage - tabler.github.io - a responsive, flat and full featured admin template</title>
+    <title>{{ env('APP_NAME') }}</title>
     <link rel="stylesheet" href="{{ url('/css/fontawesome-all.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
     <script src="{{ url('/js/require.min.js') }}"></script>
     <script>
       requirejs.config({
@@ -27,14 +31,6 @@
     <!-- Dashboard Core -->
     <link href="{{ url('/css/dashboard.css') }}" rel="stylesheet" />
     <script src="{{ url('/js/dashboard.js') }}"></script>
-    <!-- c3.js Charts Plugin -->
-    <link href="{{ url('/plugins/charts-c3/plugin.css') }}" rel="stylesheet" />
-    <script src="{{ url('/plugins/charts-c3/plugin.js') }}"></script>
-    <!-- Google Maps Plugin -->
-    <link href="{{ url('/plugins/maps-google/plugin.css') }}" rel="stylesheet" />
-    <script src="{{ url('/plugins/maps-google/plugin.js') }}"></script>
-    <!-- Input Mask Plugin -->
-    <script src="{{ url('/plugins/input-mask/plugin.js') }}"></script>
 
 {{--     <style type="text/css">
       .card {
@@ -42,14 +38,14 @@
       }
     </style> --}}
   </head>
-  <body class="">
-    <div class="page" style="background: url('{{ url('/images/stocks/background.png') }}') center center fixed no-repeat; background-size: cover; padding: 2.5rem 1rem 0 1rem;">
+  <body class="pt-5">
+    <div class="page">
       <div class="page-main">
         <div class="page-content mt-0">
           <div class="container-fluid">
             <div class="row pb-5 mb-5">
               <div class="col-12 py-5 text-center">
-                <h1 class="page-title text-white display-4 font-weight-bold m-auto" style="font-size: 3rem; text-shadow: 1px 3px 2px grey;">
+                <h1 class="page-title text-primary display-4 font-weight-bold m-auto" style="font-size: 3rem;">
                   BPP UGM's Achievements Minute by Minute
                 </h1>
               </div>
@@ -62,7 +58,7 @@
                       <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
                       <img src="{{ url('/images/icons/journal.svg') }}" width="70">
                     </div>
-                    <div class="display-4 font-weight-bold mb-3 text-primary">62</div>
+                    <div class="display-4 font-weight-bold mb-3 text-primary">{{ $data->article_scopus }}</div>
                     <div class="h5">Journal articles indexed in Scopus</div>
                   </div>
                 </div>
@@ -74,7 +70,7 @@
                       <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
                       <img src="{{ url('/images/icons/journal.svg') }}" width="70">
                     </div>
-                    <div class="display-4 font-weight-bold mb-3 text-primary">62</div>
+                    <div class="display-4 font-weight-bold mb-3 text-primary">{{ $data->article_other }}</div>
                     <div class="h5">Journal articles indexed in WoS, EBSCO, Microsoft Academic, and Pubmed</div>
                   </div>
                 </div>
@@ -86,7 +82,7 @@
                       <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
                       <img src="{{ url('/images/icons/proceeding.svg') }}" width="70">
                     </div>
-                    <div class="display-4 font-weight-bold mb-3 text-teal">62</div>
+                    <div class="display-4 font-weight-bold mb-3 text-teal">{{ $data->proceeding_scopus }}</div>
                     <div class="h5">Proceedings indexed in Scopus</div>
                   </div>
                 </div>
@@ -98,7 +94,7 @@
                       <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
                       <img src="{{ url('/images/icons/proceeding.svg') }}" width="70">
                     </div>
-                    <div class="display-4 font-weight-bold mb-3 text-teal">62</div>
+                    <div class="display-4 font-weight-bold mb-3 text-teal">{{ $data->proceeding_other }}</div>
                     <div class="h5">Proceedings indexed in WoS, EBSCO, Microsoft Academic, and Pubmed</div>
                   </div>
                 </div>
@@ -112,8 +108,8 @@
                       <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
                       <img src="{{ url('/images/icons/citation.svg') }}" width="70">
                     </div>
-                    <div class="display-4 font-weight-bold mb-3 text-orange">62</div>
-                    <div class="h5">Citations in Scopus</div>
+                    <div class="display-4 font-weight-bold mb-3 text-orange">{{ $data->citation_scopus }}</div>
+                    <div class="h5">Citations on Scopus</div>
                   </div>
                 </div>
               </div>
@@ -124,7 +120,7 @@
                       <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
                       <img src="{{ url('/images/icons/book.svg') }}" width="70">
                     </div>
-                    <div class="display-4 font-weight-bold mb-3 text-red">62</div>
+                    <div class="display-4 font-weight-bold mb-3 text-red">{{ $data->book }}</div>
                     <div class="h5">Books published</div>
                   </div>
                 </div>
@@ -136,7 +132,7 @@
                       <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
                       <img src="{{ url('/images/icons/copyright.svg') }}" width="70">
                     </div>
-                    <div class="display-4 font-weight-bold mb-3 text-yellow">62</div>
+                    <div class="display-4 font-weight-bold mb-3 text-indigo">{{ $data->copyright }}</div>
                     <div class="h5">Copyrights registered</div>
                   </div>
                 </div>
@@ -148,7 +144,7 @@
                       <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
                       <img src="{{ url('/images/icons/account.svg') }}" width="70">
                     </div>
-                    <div class="display-4 font-weight-bold mb-3 text-success">62</div>
+                    <div class="display-4 font-weight-bold mb-3 text-success">{{ $data->sinta_account }}/{{ $data->total_staff }}</div>
                     <div class="h5">Verified Sinta accounts</div>
                   </div>
                 </div>
@@ -157,19 +153,9 @@
           </div>
         </div>
       </div>
-      <footer class="footer bg-transparent border-0 text-white">
+      <footer class="footer">
         <div class="container">
-          <div class="row align-items-center flex-row-reverse">
-            <div class="col-auto ml-auto">
-              <div class="row align-items-center">
-                <div class="col-auto">
-                  <ul class="list-inline list-inline-dots mb-0">
-                    <li class="list-inline-item"><a href="./docs/index.html">Documentation</a></li>
-                    <li class="list-inline-item"><a href="./faq.html">FAQ</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+          <div class="row align-items-center">
             <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
               Copyright © 2018 <a href="http://publikasi.ugm.ac.id">Badan Penerbit dan Publikasi UGM</a>. Theme by <a href="https://codecalm.net" target="_blank">codecalm.net</a>.
             </div>
