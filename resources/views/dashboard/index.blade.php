@@ -55,7 +55,7 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
+                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/journal.svg') }}" width="70">
                     </div>
                     <div class="display-4 font-weight-bold mb-3 text-primary">{{ $data->article_scopus }}</div>
@@ -67,7 +67,7 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
+                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/journal.svg') }}" width="70">
                     </div>
                     <div class="display-4 font-weight-bold mb-3 text-primary">{{ $data->article_other }}</div>
@@ -79,7 +79,7 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
+                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/proceeding.svg') }}" width="70">
                     </div>
                     <div class="display-4 font-weight-bold mb-3 text-teal">{{ $data->proceeding_scopus }}</div>
@@ -91,7 +91,7 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
+                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/proceeding.svg') }}" width="70">
                     </div>
                     <div class="display-4 font-weight-bold mb-3 text-teal">{{ $data->proceeding_other }}</div>
@@ -105,7 +105,7 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
+                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/citation.svg') }}" width="70">
                     </div>
                     <div class="display-4 font-weight-bold mb-3 text-orange">{{ $data->citation_scopus }}</div>
@@ -117,7 +117,7 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
+                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/book.svg') }}" width="70">
                     </div>
                     <div class="display-4 font-weight-bold mb-3 text-red">{{ $data->book }}</div>
@@ -129,7 +129,7 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
+                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/copyright.svg') }}" width="70">
                     </div>
                     <div class="display-4 font-weight-bold mb-3 text-indigo">{{ $data->copyright }}</div>
@@ -141,7 +141,7 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> 24 March 2018</small>
+                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/account.svg') }}" width="70">
                     </div>
                     <div class="display-4 font-weight-bold mb-3 text-success">{{ $data->sinta_account }}/{{ $data->total_staff }}</div>
