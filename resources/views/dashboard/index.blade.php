@@ -46,7 +46,7 @@
             <div class="row pb-5 mb-5">
               <div class="col-12 py-5 text-center">
                 <h1 class="page-title text-primary display-4 font-weight-bold m-auto" style="font-size: 3rem;">
-                  BPP UGM's Achievements Minute by Minute
+                  UGM's Achievements Minute by Minute
                 </h1>
               </div>
             </div>
@@ -153,11 +153,11 @@
           </div>
         </div>
       </div>
-      <footer class="footer">
+      <footer class="footer" style="font-size: 1rem">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-              Copyright © 2018 <a href="http://publikasi.ugm.ac.id">Badan Penerbit dan Publikasi UGM</a>. Theme by <a href="https://codecalm.net" target="_blank">codecalm.net</a>.
+              Copyright © 2018 <a href="http://publikasi.ugm.ac.id" target="_blank">Badan Penerbit dan Publikasi UGM</a>. Theme by <a href="https://codecalm.net" target="_blank">codecalm.net</a>.
             </div>
           </div>
         </div>
