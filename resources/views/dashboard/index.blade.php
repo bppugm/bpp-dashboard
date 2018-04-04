@@ -71,7 +71,7 @@
                       <img src="{{ url('/images/icons/journal.svg') }}" width="70">
                     </div>
                     <div class="display-4 font-weight-bold mb-3 text-primary">{{ $data->article_other }}</div>
-                    <div class="h5">Journal articles indexed in WoS, EBSCO, Microsoft Academic, and Pubmed</div>
+                    <div class="h5">Journal articles indexed in WoS, EBSCO,Proquest, Microsoft Academic, and Pubmed</div>
                   </div>
                 </div>
               </div>
@@ -95,7 +95,7 @@
                       <img src="{{ url('/images/icons/proceeding.svg') }}" width="70">
                     </div>
                     <div class="display-4 font-weight-bold mb-3 text-teal">{{ $data->proceeding_other }}</div>
-                    <div class="h5">Proceedings indexed in WoS, EBSCO, Microsoft Academic, and Pubmed</div>
+                    <div class="h5">Proceedings indexed in WoS, EBSCO,Proquest, Microsoft Academic, and Pubmed</div>
                   </div>
                 </div>
               </div>
