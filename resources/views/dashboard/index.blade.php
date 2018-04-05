@@ -44,8 +44,9 @@
         <div class="page-content mt-0">
           <div class="container-fluid">
             <div class="row pb-5 mb-5">
-              <div class="col-12 py-5 text-center">
-                <h1 class="page-title text-primary display-4 font-weight-bold m-auto" style="font-size: 3rem;">
+              <div class="col-12 py-5 d-flex align-items-center justify-content-center">
+                <img src="{{ url('/images/logos/signature-logo-ugm.svg') }}" width="75" class="mr-3">
+                <h1 class="page-title text-primary display-4 font-weight-bold" style="font-size: 3rem;">
                   UGM's Achievements Minute by Minute
                 </h1>
               </div>
