@@ -117,7 +117,7 @@
                       <img src="{{ url('/images/icons/citation.svg') }}" width="70">
                     </div>
                     <div class="font-weight-bold mb-3 odometer text-orange" id="citation_scopus">{{ $data->citation_scopus }}</div>
-                    <div class="h5">Citations on Scopus</div>
+                    <div class="h5">Citations on Scopus in <span class="text-muted h3">{{ date('Y') }}</span></div>
                   </div>
                 </div>
               </div>
@@ -166,10 +166,12 @@
         </div>
       </div>
       <footer class="footer" style="font-size: 1rem">
-        <div class="container">
+        <div class="container-fluid">
           <div class="row align-items-center">
-            <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-              Copyright © 2018 <a href="http://publikasi.ugm.ac.id" target="_blank">Badan Penerbit dan Publikasi UGM</a>. Theme by <a href="https://codecalm.net" target="_blank">codecalm.net</a>.
+            <div class="col-12 mt-3 mt-lg-0 text-center">
+              <a href="#">About</a> | <a href="#">Site Credits</a> | <a href="#">BPP UGM</a> <br>
+              Copyright © 2018 <a href="http://publikasi.ugm.ac.id" target="_blank">Badan Penerbit dan Publikasi UGM</a>. 
+              {{-- Theme by <a href="https://codecalm.net" target="_blank">codecalm.net</a>. --}}
             </div>
           </div>
         </div>
