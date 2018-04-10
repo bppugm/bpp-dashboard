@@ -6,8 +6,18 @@
     encrypted: true
   });
 
+  function updateData(index, value) {
+      var old = $('#'+index).html();
+
+      if (old != value) {
+        $('#'+index).html(value)
+      }
+  }
+
   var channel = pusher.subscribe('dashboard-updated');
   channel.bind('App\\Events\\DashboardUpdated', function(response) {
-    alert(response.data);
+    $.each(response.data, function (index, value) {
+        updateData(index, value);
+    });
   });
 </script>
