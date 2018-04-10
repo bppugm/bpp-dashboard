@@ -116,8 +116,12 @@
                       <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/citation.svg') }}" width="70">
                     </div>
-                    <div class="font-weight-bold mb-3 odometer text-orange" id="citation_scopus">{{ $data->citation_scopus }}</div>
-                    <div class="h5">Citations on Scopus in <span class="text-muted h3">{{ date('Y') }}</span></div>
+                    <div class="font-weight-bold mb-3 text-orange">
+                      <span class="odometer" id="citation_scopus">{{ $data->citation_scopus }}</span>
+                      /
+                      <span class="odometer" style="font-size: 1.5rem;" id="citation_total">{{ $data->citation_total }}</span>
+                    </div>
+                    <div class="h5">Citations on Scopus in {{ date('Y') }} and accumulation</div>
                   </div>
                 </div>
               </div>
@@ -157,7 +161,7 @@
                       <span>/</span>
                       <span class="odometer" style="font-size: 1.5rem !important;" id="total_staff">{{ $data->total_staff }}</span>
                     </div>
-                    <div class="h5">Verified Sinta accounts</div>
+                    <div class="h5">Verified Sinta accounts and total UGM staff</div>
                   </div>
                 </div>
               </div>

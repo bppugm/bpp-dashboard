@@ -47,8 +47,12 @@
                       <input type="number" class="form-control" name="proceeding_other" value="{{ $data->proceeding_other }}">
                     </div>
                     <div class="form-group">
-                      <label for="staticEmail" class="form-label">Citation in Scopus</label>
+                      <label for="staticEmail" class="form-label">Citation on Scopus in {{ date('Y') }}</label>
                       <input type="number" class="form-control" name="citation_scopus" value="{{ $data->citation_scopus }}">
+                    </div>
+                    <div class="form-group">
+                      <label for="staticEmail" class="form-label">Total citation in Scopus</label>
+                      <input type="number" class="form-control" name="citation_total" value="{{ $data->citation_total }}">
                     </div>
                     <div class="form-group">
                       <label for="staticEmail" class="form-label">Books published</label>
