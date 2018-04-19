@@ -3,6 +3,7 @@
 namespace App\Console;
 
 use App\Jobs\UpdateScopusArticle;
+use App\Jobs\UpdateScopusProceeding;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -28,6 +29,9 @@ class Kernel extends ConsoleKernel
         $schedule->job(new UpdateScopusArticle)
             ->dailyAt('08:00');
             // ->everyMinute();
+
+        $schedule->job(new UpdateScopusProceeding)
+            ->dailyAt(date('H:i'));
     }
 
     /**

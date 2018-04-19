@@ -10,7 +10,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
-class UpdateScopusArticle implements ShouldQueue
+class UpdateScopusProceeding implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -21,7 +21,7 @@ class UpdateScopusArticle implements ShouldQueue
      */
     public function __construct()
     {
-
+        //
     }
 
     /**
@@ -32,10 +32,10 @@ class UpdateScopusArticle implements ShouldQueue
     public function handle()
     {
         $repo = new ScopusRepository;
-        $article = $repo->getArticle();
+        $proceeding = $repo->getProceeding();
 
         Achievement::first()->update([
-            'article_scopus' => $article,
+            'proceeding_scopus' => $proceeding
         ]);
     }
 }
