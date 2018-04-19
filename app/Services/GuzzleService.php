@@ -95,6 +95,7 @@ class GuzzleService
         $this->client = new Client([
             'base_uri' => $this->getBaseUri()
         ]);
+        $this->setRepoHeader();
     }
 
     public function getBaseUri()
