@@ -26,8 +26,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->job(new UpdateScopusArticle)
-            ->everyMinute();
-            // ->dailyAt('08:00');
+            ->dailyAt('08:00');
+            // ->everyMinute();
     }
 
     /**
