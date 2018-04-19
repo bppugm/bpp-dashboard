@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Achievement;
+use App\Jobs\UpdateScopusArticle;
+use App\Repositories\ScopusRepository;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,7 +16,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('scopus');
     }
 
     /**
@@ -36,5 +38,14 @@ class HomeController extends Controller
         $data->update($request->all());
 
         return redirect()->route('home')->with('status', 'Update data success');
+    }
+
+    public function scopus()
+    {
+        // $repository = new ScopusRepository;
+        // $data = $repository->search();
+
+        // return $data;
+        UpdateScopusArticle::dispatch();
     }
 }

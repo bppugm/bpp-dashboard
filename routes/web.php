@@ -17,3 +17,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::put('/update', 'HomeController@update')->name('home.update');
+Route::get('/scopus', 'HomeController@scopus')->name('home.scopus.index');
