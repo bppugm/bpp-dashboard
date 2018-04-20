@@ -43,4 +43,36 @@ class ScopusRepository extends GuzzleService
 
         return $this->data['search-results']['opensearch:totalResults'];
     }
+
+    public function getTotalCitation($start = 0, $count = 200)
+    {
+        $this->query = [
+            'query' => 'AF-ID(60069380)',
+            'field' => 'citedby-count',
+            'sort' => '-citedby-count',
+            'count' => $count,
+            'start' => $start,
+        ];
+
+        $sumIsNotZero = true;
+        $totalCitation = 0;
+
+        while ($sumIsNotZero) {
+            $this->getResponse('GET', 'content/search/scopus');
+            $sumCitation = collect($this->data['search-results']['entry'])->sum('citedby-count');
+
+            $totalCitation += $sumCitation;
+
+            if ($sumCitation == 0) {
+                $sumIsNotZero = false;
+            }
+
+            $this->query['start'] += 200;
+        }
+
+        return [
+            'total' => $totalCitation,
+            $this->data,
+        ];
+    }
 }
