@@ -31,14 +31,6 @@
                     @csrf
                     @method('PUT')
                     <div class="form-group">
-                      <label for="staticEmail" class="form-label">Journal articles indexed in Scopus</label>
-                      <input type="number" class="form-control" name="article_scopus" value="{{ $data->article_scopus }}">
-                    </div>
-                    <div class="form-group">
-                      <label for="staticEmail" class="form-label">Proceedings indexed in Scopus</label>
-                      <input type="number" class="form-control" name="proceeding_scopus" value="{{ $data->proceeding_scopus }}">
-                    </div>
-                    <div class="form-group">
                       <label for="staticEmail" class="form-label">Journal articles indexed in WoS, EBSCO, Microsoft Academic, and Pubmed</label>
                       <input type="number" class="form-control" name="article_other" value="{{ $data->article_other }}">
                     </div>
@@ -69,6 +61,17 @@
                     <div class="form-group">
                       <label for="staticEmail" class="form-label">Total Sinta accounts</label>
                       <input type="number" class="form-control" name="total_staff" value="{{ $data->total_staff }}">
+                    </div>
+                    <div class="form-group border-bottom mt-4">
+                      <b>These fields below have implemented Scheduled Update. There's no need to update it manually.</b>
+                    </div>
+                    <div class="form-group">
+                      <label for="staticEmail" class="form-label">Journal articles indexed in Scopus</label>
+                      <input type="number" class="form-control" disabled name="article_scopus" value="{{ $data->article_scopus }}">
+                    </div>
+                    <div class="form-group">
+                      <label for="staticEmail" class="form-label">Proceedings indexed in Scopus</label>
+                      <input type="number" class="form-control" disabled name="proceeding_scopus" value="{{ $data->proceeding_scopus }}">
                     </div>
                     <div class="form-group">
                       <button class="btn btn-success float-right" type="submit">Save changes</button>
