@@ -26,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data = Achievement::latest()->first();
+        $data = Achievement::getData();
 
         return view('home', compact('data'));
     }
