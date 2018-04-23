@@ -63,10 +63,10 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data->updated_at->format('j F Y') }}</small>
+                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['article_scopus']->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/journal.svg') }}" width="70">
                     </div>
-                    <div class="font-weight-bold mb-3 odometer text-primary" id="article_scopus">{{ $data->article_scopus }}</div>
+                    <div class="font-weight-bold mb-3 odometer text-primary" id="article_scopus">{{ $data['article_scopus']->value }}</div>
                     <div class="h5">Journal articles indexed in Scopus</div>
                   </div>
                 </div>
@@ -75,10 +75,10 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data->updated_at->format('j F Y') }}</small>
+                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['article_other']->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/journal.svg') }}" width="70">
                     </div>
-                    <div class="font-weight-bold mb-3 odometer text-primary" id="article_other">{{ $data->article_other }}</div>
+                    <div class="font-weight-bold mb-3 odometer text-primary" id="article_other">{{ $data['article_other']->value }}</div>
                     <div class="h5">Journal articles indexed in WoS, EBSCO, Proquest, Microsoft Academic, and Pubmed</div>
                   </div>
                 </div>
@@ -87,10 +87,10 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data->updated_at->format('j F Y') }}</small>
+                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['proceeding_scopus']->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/proceeding.svg') }}" width="70">
                     </div>
-                    <div class="font-weight-bold mb-3 odometer text-teal" id="proceeding_scopus">{{ $data->proceeding_scopus }}</div>
+                    <div class="font-weight-bold mb-3 odometer text-teal" id="proceeding_scopus">{{ $data['proceeding_scopus']->value }}</div>
                     <div class="h5">Proceedings indexed in Scopus</div>
                   </div>
                 </div>
@@ -99,10 +99,10 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data->updated_at->format('j F Y') }}</small>
+                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['proceeding_other']->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/proceeding.svg') }}" width="70">
                     </div>
-                    <div class="font-weight-bold mb-3 odometer text-teal" id="proceeding_other">{{ $data->proceeding_other }}</div>
+                    <div class="font-weight-bold mb-3 odometer text-teal" id="proceeding_other">{{ $data['proceeding_other']->value }}</div>
                     <div class="h5">Proceedings indexed in WoS, EBSCO, Proquest, Microsoft Academic, and Pubmed</div>
                   </div>
                 </div>
@@ -113,13 +113,13 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data->updated_at->format('j F Y') }}</small>
+                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['citation_scopus']->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/citation.svg') }}" width="70">
                     </div>
                     <div class="font-weight-bold mb-3 text-orange">
-                      <span class="odometer" id="citation_scopus">{{ $data->citation_scopus }}</span>
+                      <span class="odometer" id="citation_scopus">{{ $data['citation_scopus']->value }}</span>
                       /
-                      <span class="odometer" style="font-size: 1.5rem;" id="citation_total">{{ $data->citation_total }}</span>
+                      <span class="odometer" style="font-size: 1.5rem;" id="citation_total">{{ $data['total_citation']->value }}</span>
                     </div>
                     <div class="h5">Citations on Scopus in {{ date('Y') }} and accumulation</div>
                   </div>
@@ -129,10 +129,10 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data->updated_at->format('j F Y') }}</small>
+                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['book']->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/book.svg') }}" width="70">
                     </div>
-                    <div class="font-weight-bold mb-3 odometer text-red" id="book">{{ $data->book }}</div>
+                    <div class="font-weight-bold mb-3 odometer text-red" id="book">{{ $data['book']->value }}</div>
                     <div class="h5">Books published</div>
                   </div>
                 </div>
@@ -141,10 +141,10 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data->updated_at->format('j F Y') }}</small>
+                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['copyright']->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/copyright.svg') }}" width="70">
                     </div>
-                    <div class="font-weight-bold mb-3 odometer text-indigo" id="copyright">{{ $data->copyright }}</div>
+                    <div class="font-weight-bold mb-3 odometer text-indigo" id="copyright">{{ $data['copyright']->value }}</div>
                     <div class="h5">Copyrights registered</div>
                   </div>
                 </div>
@@ -153,13 +153,13 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data->updated_at->format('j F Y') }}</small>
+                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['sinta_account']->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/account.svg') }}" width="70">
                     </div>
                     <div class="font-weight-bold mb-3 text-success">
-                      <span class="odometer" id="sinta_account">{{ $data->sinta_account }}</span>
+                      <span class="odometer" id="sinta_account">{{ $data['sinta_account']->value }}</span>
                       <span>/</span>
-                      <span class="odometer" style="font-size: 1.5rem !important;" id="total_staff">{{ $data->total_staff }}</span>
+                      <span class="odometer" style="font-size: 1.5rem !important;" id="total_staff">{{ $data['total_staff']->value }}</span>
                     </div>
                     <div class="h5">Verified Sinta accounts and total UGM staff</div>
                   </div>
