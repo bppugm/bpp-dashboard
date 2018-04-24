@@ -36,8 +36,9 @@ class HomeController extends Controller
         $request->validate([
             'data.*' => 'required|integer'
         ]);
+
         foreach ($request->data as $key => $value) {
-            Achievement::where('name', $key)->update(['value' => $value]);
+            Achievement::where('name', $key)->first()->update(['value' => $value]);
         }
         
         return redirect()->route('home')->with('status', 'Update data success');
