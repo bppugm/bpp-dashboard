@@ -9,7 +9,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $data = Achievement::latest()->first();
+        $data = Achievement::getData();
 
         return view('dashboard.index', compact('data'));
     }
