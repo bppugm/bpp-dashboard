@@ -14,7 +14,7 @@ class ModifyAchiementsTable extends Migration
     public function up()
     {
         Schema::table('achievements', function (Blueprint $table) {
-            $table->dropColumn(['article_scopus', 'proceeding_scopus', 'article_other', 'proceeding_other', 'citation_scopus', 'book', 'copyright', 'sinta_account', 'total_staff']);
+            $table->dropColumn(['article_scopus', 'proceeding_scopus', 'article_other', 'proceeding_other', 'citation_scopus', 'citation_total', 'book', 'copyright', 'sinta_account', 'total_staff']);
             $table->integer('category_id')->unsigned();
             $table->string('name');
             $table->integer('value')->nullable();
