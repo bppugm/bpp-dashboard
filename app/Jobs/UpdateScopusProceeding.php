@@ -34,8 +34,8 @@ class UpdateScopusProceeding implements ShouldQueue
         $repo = new ScopusRepository;
         $proceeding = $repo->getProceeding();
 
-        Achievement::first()->update([
-            'proceeding_scopus' => $proceeding
+        Achievement::where('name', 'proceeding_scopus')->first()->update([
+            'value' => $proceeding
         ]);
     }
 }

@@ -34,8 +34,8 @@ class UpdateScopusArticle implements ShouldQueue
         $repo = new ScopusRepository;
         $article = $repo->getArticle();
 
-        Achievement::first()->update([
-            'article_scopus' => $article,
+        Achievement::where('name', 'article_scopus')->first()->update([
+            'value' => $article
         ]);
     }
 }
