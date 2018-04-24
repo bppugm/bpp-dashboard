@@ -33,10 +33,13 @@ class HomeController extends Controller
 
     public function update(Request $request)
     {
-        $data = Achievement::latest()->first();
-
-        $data->update($request->all());
-
+        $request->validate([
+            'data.*' => 'required|integer'
+        ]);
+        foreach ($request->data as $key => $value) {
+            Achievement::where('name', $key)->update(['value' => $value]);
+        }
+        
         return redirect()->route('home')->with('status', 'Update data success');
     }
 
