@@ -16,8 +16,6 @@
 
   var channel = pusher.subscribe('dashboard-updated');
   channel.bind('App\\Events\\DashboardUpdated', function(response) {
-    $.each(response.data, function (index, value) {
-        updateData(index, value);
-    });
+    updateData(response.data.name, response.data.value)
   });
 </script>

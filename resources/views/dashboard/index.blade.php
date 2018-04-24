@@ -119,7 +119,7 @@
                     <div class="font-weight-bold mb-3 text-orange">
                       <span class="odometer" id="citation_scopus">{{ $data['citation_scopus']->value }}</span>
                       /
-                      <span class="odometer" style="font-size: 1.5rem;" id="citation_total">{{ $data['total_citation']->value }}</span>
+                      <span class="odometer" style="font-size: 1.5rem;" id="total_citation">{{ $data['total_citation']->value }}</span>
                     </div>
                     <div class="h5">Citations on Scopus in {{ date('Y') }} and accumulation</div>
                   </div>
