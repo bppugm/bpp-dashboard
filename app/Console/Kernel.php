@@ -28,10 +28,11 @@ class Kernel extends ConsoleKernel
     {
         $schedule->job(new UpdateScopusArticle)
             ->dailyAt('08:00');
-            // ->everyMinute();
+            // ->dailyAt(date('H:i'));
 
         $schedule->job(new UpdateScopusProceeding)
             ->dailyAt('08:00');
+            // ->dailyAt(date('H:i'));
     }
 
     /**
