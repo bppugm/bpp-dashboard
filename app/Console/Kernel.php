@@ -27,12 +27,12 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->job(new UpdateScopusArticle)
-            ->dailyAt('08:00');
-            // ->dailyAt(date('H:i'));
+            // ->dailyAt('08:00');
+            ->dailyAt(date('H:i'));
 
         $schedule->job(new UpdateScopusProceeding)
-            ->dailyAt('08:00');
-            // ->dailyAt(date('H:i'));
+            // ->dailyAt('08:00');
+            ->dailyAt(date('H:i'));
     }
 
     /**
