@@ -135,7 +135,7 @@ class GuzzleService
     {
         $body = [];
 
-        $body['verify'] = false;
+        // $body['verify'] = false;
 
         if (!empty($this->query)) {
             $body['query'] = $this->query;
