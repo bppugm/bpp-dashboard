@@ -94,12 +94,12 @@
                 <div class="form-group">
                   <label for="staticEmail" class="form-label">Journal articles indexed in Scopus</label>
                   <input type="number" class="form-control" disabled value="{{ $data['article_scopus']->value }}">
-                  <small class="text-muted float-right"><i class="far fa-clock fa-fw"></i> {{ $data['citation_scopus']->updated_at->format('j F Y h:i') }}</small>
+                  <small class="text-muted float-right"><i class="far fa-clock fa-fw"></i> {{ $data['article_scopus']->updated_at->format('j F Y h:i') }}</small>
                 </div>
                 <div class="form-group">
                   <label for="staticEmail" class="form-label">Proceedings indexed in Scopus</label>
                   <input type="number" class="form-control" disabled value="{{ $data['proceeding_scopus']->value }}">
-                  <small class="text-muted float-right"><i class="far fa-clock fa-fw"></i> {{ $data['citation_scopus']->updated_at->format('j F Y h:i') }}</small>
+                  <small class="text-muted float-right"><i class="far fa-clock fa-fw"></i> {{ $data['proceeding_scopus']->updated_at->format('j F Y h:i') }}</small>
                 </div>
                 <div class="form-group">
                   <button class="btn btn-success" type="submit">Save changes</button>
