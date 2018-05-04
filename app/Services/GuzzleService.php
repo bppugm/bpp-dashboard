@@ -153,6 +153,12 @@ class GuzzleService
             $body['multipart'] = $this->multipart;
         }
 
+        if (App::environment('production')) {
+            $body['curl'] = [
+                'CURLOPT_SSLCERT' => env('CURL_SSLCERT'),
+            ];
+        }
+
         $body['headers'] = $this->setHeaders();
 
         // dd($this->setHeaders());
