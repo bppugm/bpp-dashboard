@@ -6,16 +6,13 @@
     encrypted: true
   });
 
-  function updateData(index, value) {
-      var old = $('#'+index).html();
-
-      if (old != value) {
-        $('#'+index).html(value)
-      }
+  function updateData(data) {
+      $('#'+data.name).html(data.value)
+      $('#'+data.name+"_date").html('<i class="fa fa-cloud-upload-alt fa-fw"></i> '+data.formatted_updated_at);
   }
 
   var channel = pusher.subscribe('dashboard-updated');
   channel.bind('App\\Events\\DashboardUpdated', function(response) {
-    updateData(response.data.name, response.data.value)
+    updateData(response.data);
   });
 </script>

@@ -13,6 +13,6 @@ class AchievementObserver
     
     public function updated(Achievement $achievement)
     {
-        event(new DashboardUpdated($achievement));
+        event(new DashboardUpdated($achievement->append('formatted_updated_at')->toArray()));
     }
 }

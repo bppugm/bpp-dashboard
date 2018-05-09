@@ -63,7 +63,7 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['article_scopus']->updated_at->format('j F Y') }}</small>
+                      <small id="article_scopus_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['article_scopus']->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/journal.svg') }}" width="70">
                     </div>
                     <div class="font-weight-bold mb-3 odometer text-primary" id="article_scopus">{{ $data['article_scopus']->value }}</div>
@@ -75,7 +75,7 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['article_other']->updated_at->format('j F Y') }}</small>
+                      <small id="article_other_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['article_other']->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/journal.svg') }}" width="70">
                     </div>
                     <div class="font-weight-bold mb-3 odometer text-primary" id="article_other">{{ $data['article_other']->value }}</div>
@@ -87,7 +87,7 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['proceeding_scopus']->updated_at->format('j F Y') }}</small>
+                      <small id="proceeding_scopus_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['proceeding_scopus']->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/proceeding.svg') }}" width="70">
                     </div>
                     <div class="font-weight-bold mb-3 odometer text-teal" id="proceeding_scopus">{{ $data['proceeding_scopus']->value }}</div>
@@ -99,7 +99,7 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['proceeding_other']->updated_at->format('j F Y') }}</small>
+                      <small id="proceeding_other_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['proceeding_other']->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/proceeding.svg') }}" width="70">
                     </div>
                     <div class="font-weight-bold mb-3 odometer text-teal" id="proceeding_other">{{ $data['proceeding_other']->value }}</div>
@@ -113,7 +113,7 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['citation_scopus']->updated_at->format('j F Y') }}</small>
+                      <small id="citation_scopus_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['citation_scopus']->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/citation.svg') }}" width="70">
                     </div>
                     <div class="font-weight-bold mb-3 text-orange">
@@ -129,7 +129,7 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['book']->updated_at->format('j F Y') }}</small>
+                      <small id="book_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['book']->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/book.svg') }}" width="70">
                     </div>
                     <div class="font-weight-bold mb-3 odometer text-red" id="book">{{ $data['book']->value }}</div>
@@ -141,7 +141,7 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['copyright']->updated_at->format('j F Y') }}</small>
+                      <small id="copyright_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['copyright']->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/copyright.svg') }}" width="70">
                     </div>
                     <div class="font-weight-bold mb-3 odometer text-indigo" id="copyright">{{ $data['copyright']->value }}</div>
@@ -153,7 +153,7 @@
                 <div class="card h-100" style="border-radius: 1rem">
                   <div class="card-body">
                     <div class="text-left d-flex justify-content-between">
-                      <small class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['sinta_account']->updated_at->format('j F Y') }}</small>
+                      <small id="sinta_account_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['sinta_account']->updated_at->format('j F Y') }}</small>
                       <img src="{{ url('/images/icons/account.svg') }}" width="70">
                     </div>
                     <div class="font-weight-bold mb-3 text-success">

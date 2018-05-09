@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Achievement extends Model
 {
     protected $guarded = ['id'];
+    protected $appends = ['formatted_updated_at'];
 
     public static function getData()
     {
@@ -25,4 +26,9 @@ class Achievement extends Model
 
         return $data;
     }
+
+    public function getFormattedUpdatedAtAttribute(){
+        return $this->updated_at->format('j F Y');
+    }
+        
 }
