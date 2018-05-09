@@ -20,19 +20,19 @@
 
     <!-- Generated: 2018-03-27 13:25:03 +0200 -->
     <title>{{ env('APP_NAME') }}</title>
-    <link rel="stylesheet" href="{{ url('css/fontawesome-all.css') }}">
+    <link rel="stylesheet" href="css/fontawesome-all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
 
     <!-- Dashboard Core -->
-    <link href="{{ url('css/dashboard.css') }}" rel="stylesheet" />
+    <link href="css/dashboard.css" rel="stylesheet" />
     {{-- JQUERY --}}
-    <script src="{{ url('js/jquery-3.2.1.min.js') }}"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
 
     <!-- Odometr includes -->
     {{-- <link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-car.css" /> --}}
     {{-- <script src="http://github.hubspot.com/odometer/odometer.js"></script> --}}
-    <script src="{{ url('js/odometer.min.js') }}"></script>
-    <link rel="stylesheet" href="{{ url('css/odometer-theme-default.css') }}"/>
+    <script src="js/odometer.min.js"></script>
+    <link rel="stylesheet" href="css/odometer-theme-default.css"/>
 
     {{-- PUSHER LIBRARY --}}
     <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
