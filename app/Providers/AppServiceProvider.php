@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
         Achievement::observe(AchievementObserver::class);
 
         if (env('APP_ENV') == 'production') {
-            $url->forceSchema('https');
+            $url->forceScheme('https');
         }
     }
 
