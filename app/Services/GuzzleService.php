@@ -153,9 +153,9 @@ class GuzzleService
             $body['multipart'] = $this->multipart;
         }
 
-        $body['curl'] = [
-            CURLOPT_CAINFO => env('CURL_SSLCERT'),
-        ];
+        // $body['curl'] = [
+        //     CURLOPT_CAINFO => env('CURL_SSLCERT'),
+        // ];
 
         $body['headers'] = $this->setHeaders();
 
