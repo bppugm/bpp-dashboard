@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use App\Achievement;
 use App\Observers\AchievementObserver;
-use Illuminate\Contracts\Routing\UrlGenerator;
+use Illuminate\Routing\UrlGenerator;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
