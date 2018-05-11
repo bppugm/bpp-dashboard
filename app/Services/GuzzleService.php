@@ -154,7 +154,9 @@ class GuzzleService
         }
 
         $body['curl'] = [
-            CURLOPT_CAINFO => env('CURL_SSLCERT'),
+            // CURLOPT_CAINFO => env('CURL_SSLCERT'),
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_SSL_VERIFYHOST => false,
         ];
 
         $body['headers'] = $this->setHeaders();
