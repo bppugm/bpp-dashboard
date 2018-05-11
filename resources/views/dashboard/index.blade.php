@@ -20,7 +20,7 @@
 
     <!-- Generated: 2018-03-27 13:25:03 +0200 -->
     <title>{{ env('APP_NAME') }}</title>
-    <link rel="stylesheet" href={{ url('css/fontawesome-all.css') }}>
+    <link rel="stylesheet" href="https://digitalpress.ugm.ac.id/ugm-achievement/css/fontawesome-all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
 
     <!-- Dashboard Core -->
