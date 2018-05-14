@@ -19,3 +19,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/scheduled-udpate', 'ScheduledUpdateController@index')->name('scheduled.index');
 Route::put('/update', 'HomeController@update')->name('home.update');
 Route::get('/scopus', 'HomeController@scopus')->name('home.scopus.index');
+
+Route::group(['prefix' => 'scopus', 'middleware' => 'auth'], function(){
+    Route::post('/article', 'Api\ScopusController@article');
+    Route::post('/proceeding', 'Api\ScopusController@proceeding');
+});

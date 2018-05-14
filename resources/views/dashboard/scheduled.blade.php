@@ -26,18 +26,24 @@
               <div class="form-group border-bottom">
                 <b>These fields below have implemented Scheduled Update. There's no need to update it manually.</b>
               </div>
-              <div class="form-group">
+              <div id="article_scopus" class="form-group">
                 <label for="staticEmail" class="form-label">Journal articles indexed in Scopus</label>
                 <input type="number" class="form-control" disabled value="{{ $data['article_scopus']->value }}">
-                <small class="text-muted float-right"><i class="far fa-clock fa-fw"></i> {{ $data['article_scopus']->updated_at->format('j F Y h:i') }}</small>
+                <small id="article_scopus_date" class="text-muted float-right"><i class="far fa-clock fa-fw"></i> {{ $data['article_scopus']->updated_at->format('j F Y h:i') }}</small>
+                <div class="valid-feedback">
+                  
+                </div>
               </div>
-              <div class="form-group">
+              <div id="proceeding_scopus" class="form-group">
                 <label for="staticEmail" class="form-label">Proceedings indexed in Scopus</label>
                 <input type="number" class="form-control" disabled value="{{ $data['proceeding_scopus']->value }}">
-                <small class="text-muted float-right"><i class="far fa-clock fa-fw"></i> {{ $data['proceeding_scopus']->updated_at->format('j F Y h:i') }}</small>
+                <small id="proceeding_scopus_date" class="text-muted float-right"><i class="far fa-clock fa-fw"></i> {{ $data['proceeding_scopus']->updated_at->format('j F Y h:i') }}</small>
+                <div class="valid-feedback">
+                  
+                </div>
               </div>
               <div class="form-group">
-                <button class="btn btn-success" type="submit">Save changes</button>
+                <button class="btn btn-success" type="button" onclick="checkUpdates()">Check for updates</button>
               </div>
             </form>
           </div>
@@ -45,4 +51,48 @@
       </div>
     </div>
   </div>
+@endsection
+
+@section('script')
+  <script type="text/javascript">
+    var status = {};
+
+    function updateField(data) {
+      var field = $('#'+data.name)
+      var input = field.find('input')
+      var feedback = field.find('.valid-feedback')
+      var date = field.find('small')
+
+      input.addClass('is-valid')
+      if (input.val() == data.value) {
+        feedback.html('Data was already up to date');
+      } else {
+        feedback.html('Sucessfully updated');
+        input.val(data.value)
+        date.html('Updated just now')
+      }
+    }
+
+    function checkUpdates() {
+      var promises = [];
+      var endpoints = {
+        article_scopus: '/scopus/article',
+        proceeding_scopus: '/scopus/proceeding'
+      }
+
+      $(".btn-success").addClass('disabled').html('Updating...');
+
+      $.each(endpoints, function(name, url) {
+        promises.push(axios.post(url));
+      });
+
+      axios.all(promises).then(function (responses) {
+        $.each(responses, function (index, response) {
+          updateField(response.data);
+        });
+
+        $(".btn-success").removeClass('disabled').html('Check for updates');
+      });
+    }
+  </script>
 @endsection

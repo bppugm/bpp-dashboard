@@ -16,6 +16,3 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::get('/scopus/article', 'Api\ScopusController@article');
-Route::get('/scopus/proceeding', 'Api\ScopusController@proceeding');
