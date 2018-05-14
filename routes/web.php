@@ -16,5 +16,6 @@ Route::get('/', 'DashboardController@index')->name('dashboard.index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/scheduled-udpate', 'ScheduledUpdateController@index')->name('scheduled.index');
 Route::put('/update', 'HomeController@update')->name('home.update');
 Route::get('/scopus', 'HomeController@scopus')->name('home.scopus.index');
