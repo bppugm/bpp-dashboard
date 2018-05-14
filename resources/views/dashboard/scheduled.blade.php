@@ -76,8 +76,8 @@
     function checkUpdates() {
       var promises = [];
       var endpoints = {
-        article_scopus: '/scopus/article',
-        proceeding_scopus: '/scopus/proceeding'
+        article_scopus: '{{ url('scopus/article') }}',
+        proceeding_scopus: '{{ url('scopus/proceeding') }}'
       }
 
       $(".btn-success").addClass('disabled').html('Updating...');
