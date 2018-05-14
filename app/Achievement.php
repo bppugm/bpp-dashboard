@@ -9,7 +9,7 @@ class Achievement extends Model
     protected $guarded = ['id'];
     protected $appends = ['formatted_updated_at'];
 
-    public static function getData()
+    public static function getData($data = [])
     {
         $achievement = new Achievement;
 
