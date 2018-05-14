@@ -28,7 +28,7 @@ class HomeController extends Controller
     {
         $data = Achievement::getData();
 
-        return view('home', compact('data'));
+        return view('dashboard.index', compact('data'));
     }
 
     public function update(Request $request)
