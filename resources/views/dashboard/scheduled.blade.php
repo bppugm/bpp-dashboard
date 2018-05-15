@@ -84,6 +84,7 @@
       var endpoints = setEndpoints();
 
       $(".btn-success").addClass('disabled').html('Updating...');
+      toastr.info('Please wait until it finished', 'Updating');
 
       $.each(endpoints, function(name, url) {
         promises.push(axios.post(url));
@@ -95,6 +96,7 @@
           updateField(response.data);
         });
         restoreButton()
+        toastr.success('Update finished');
       })
       .catch(function (error) {
           catchErrors(error);
