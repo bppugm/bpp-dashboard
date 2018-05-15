@@ -73,10 +73,14 @@
       }
     }
 
+    function restoreButton() {
+      $(".btn-success").removeClass('disabled').html('Check for updates');
+    }
+
     function checkUpdates() {
       var promises = [];
       var endpoints = {
-        article_scopus: '{{ url('scopus/article') }}',
+        article_scopus: '{{ url('scopus/articles') }}',
         proceeding_scopus: '{{ url('scopus/proceeding') }}'
       }
 
@@ -91,10 +95,11 @@
         $.each(responses, function (index, response) {
           updateField(response.data);
         });
-        $(".btn-success").removeClass('disabled').html('Check for updates');
+        restoreButton()
       })
       .catch(function (error) {
           console.log(error);
+          restoreButton()
         });
     }
   </script>
