@@ -7,24 +7,14 @@
         @include('layouts.sidebar')
       </div>
       <div class="col-md-9">
-        @if (session('status'))
-          <div class="alert alert-success">
-              {{ session('status') }}
-          </div>
-        @endif
-        @if ($errors->first('data.*'))
-          <div class="alert alert-warning">
-            Whoops, it looks like you have entered incorrect value. Please try again.
-          </div>
-        @endif
         <div class="card">
-          <div class="card-header">Edit data</div>
+          <div class="card-header">Achiement data</div>
           <div class="card-body">
             <form method="POST" action="{{ route('home.update') }}">
               @csrf
               @method('PUT')
-              <div class="form-group border-bottom">
-                <b>These fields below have implemented Scheduled Update. There's no need to update it manually.</b>
+              <div class="alert alert-info">
+                These fields below have implemented Scheduled Update. However, it is possible to run update at anytime.
               </div>
               <div id="article_scopus" class="form-group">
                 <label for="staticEmail" class="form-label">Journal articles indexed in Scopus</label>
@@ -77,12 +67,21 @@
       $(".btn-success").removeClass('disabled').html('Check for updates');
     }
 
-    function checkUpdates() {
-      var promises = [];
-      var endpoints = {
-        article_scopus: '{{ url('scopus/articles') }}',
+    function catchErrors(error) {
+      console.log(error);
+      toastr.error(error.response.data.exception, 'Error '+error.response.status);
+    }
+
+    function setEndpoints() {
+      return {
+        article_scopus: '{{ url('scopus/article') }}',
         proceeding_scopus: '{{ url('scopus/proceeding') }}'
       }
+    }
+
+    function checkUpdates() {
+      var promises = [];
+      var endpoints = setEndpoints();
 
       $(".btn-success").addClass('disabled').html('Updating...');
 
@@ -98,8 +97,8 @@
         restoreButton()
       })
       .catch(function (error) {
-          console.log(error);
-          restoreButton()
+          catchErrors(error);
+          restoreButton();
         });
     }
   </script>
