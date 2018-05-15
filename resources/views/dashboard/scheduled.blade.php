@@ -87,16 +87,15 @@
       });
 
       axios.all(promises)
-        .then(function (responses) {
-          $.each(responses, function (index, response) {
-            updateField(response.data);
-          })
-        .catch(function (error) {
-            console.log(error);
-          });
-
+      .then(function (responses) {
+        $.each(responses, function (index, response) {
+          updateField(response.data);
+        });
         $(".btn-success").removeClass('disabled').html('Check for updates');
-      });
+      })
+      .catch(function (error) {
+          console.log(error);
+        });
     }
   </script>
 @endsection
