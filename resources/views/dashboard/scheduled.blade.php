@@ -86,10 +86,14 @@
         promises.push(axios.post(url));
       });
 
-      axios.all(promises).then(function (responses) {
-        $.each(responses, function (index, response) {
-          updateField(response.data);
-        });
+      axios.all(promises)
+        .then(function (responses) {
+          $.each(responses, function (index, response) {
+            updateField(response.data);
+          })
+        .catch(function (error) {
+            console.log(error);
+          });
 
         $(".btn-success").removeClass('disabled').html('Check for updates');
       });
