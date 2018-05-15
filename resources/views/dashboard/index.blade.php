@@ -18,7 +18,7 @@
           </div>
         @endif
         <div class="card">
-          <div class="card-header">Edit data</div>
+          <div class="card-header">Achievement data</div>
           <div class="card-body">
             <form method="POST" action="{{ route('home.update') }}">
               @csrf
