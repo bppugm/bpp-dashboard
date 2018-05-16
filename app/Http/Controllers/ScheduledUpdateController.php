@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class ScheduledUpdateController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
         $data = Achievement::getData();
