@@ -11,7 +11,7 @@ class ScheduledUpdateController extends Controller
     public function index()
     {
         $data = Achievement::getData();
-        $jobs = FailedJob::latest()->get();
+        $jobs = FailedJob::orderBy('failed_at', 'desc')->get();
 
         // return $jobs;
         
