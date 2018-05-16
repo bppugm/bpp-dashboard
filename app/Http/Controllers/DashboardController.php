@@ -11,6 +11,6 @@ class DashboardController extends Controller
     {
         $data = Achievement::getData();
 
-        return view('dashboard.index', compact('data'));
+        return view('home', compact('data'));
     }
 }
