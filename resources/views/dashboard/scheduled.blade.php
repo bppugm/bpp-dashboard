@@ -40,7 +40,7 @@
         </div>
         <div class="card mt-3">
           <div class="card-header d-flex justify-content-between align-items-center">
-            Failed updates
+            <div>Failed updates <span class="badge badge-pill badge-info">{{ $jobs->count() }}</span></div> 
             <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#clearFailedUpdatesModal">
               Clear all
             </button>
