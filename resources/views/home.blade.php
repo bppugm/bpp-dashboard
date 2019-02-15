@@ -25,9 +25,6 @@
 
     <!-- Dashboard Core -->
     <link href="css/dashboard.css" rel="stylesheet" />
-    {{-- JQUERY --}}
-    <script src="js/jquery-3.2.1.min.js"></script>
-
     <!-- Odometr includes -->
     {{-- <link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-car.css" /> --}}
     {{-- <script src="http://github.hubspot.com/odometer/odometer.js"></script> --}}
@@ -36,6 +33,8 @@
 
     {{-- PUSHER LIBRARY --}}
     <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     @include('script.pusher')
 
     <style type="text/css">
@@ -45,8 +44,8 @@
     </style>
 
   </head>
-  <body class="pt-5">
-    <div class="page">
+  <body class="pt-5" >
+    <div class="page" id="app">
       <div class="page-main">
         <div class="page-content mt-0">
           <div class="container-fluid">
@@ -58,114 +57,10 @@
                 </h1>
               </div>
             </div>
-            <div class="row row-cards">
-              <div class="col-md-3">
-                <div class="card h-100" style="border-radius: 1rem">
-                  <div class="card-body">
-                    <div class="text-left d-flex justify-content-between">
-                      <small id="article_scopus_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['article_scopus']->updated_at->format('j F Y') }}</small>
-                      <img src="{{ url('images/icons/journal.svg') }}" width="70">
-                    </div>
-                    <div class="font-weight-bold mb-3 odometer text-primary" id="article_scopus">{{ $data['article_scopus']->value }}</div>
-                    <div class="h5">Journal articles indexed in Scopus</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 ">
-                <div class="card h-100" style="border-radius: 1rem">
-                  <div class="card-body">
-                    <div class="text-left d-flex justify-content-between">
-                      <small id="article_other_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['article_other']->updated_at->format('j F Y') }}</small>
-                      <img src="{{ url('images/icons/journal.svg') }}" width="70">
-                    </div>
-                    <div class="font-weight-bold mb-3 odometer text-primary" id="article_other">{{ $data['article_other']->value }}</div>
-                    <div class="h5">Journal articles indexed in WoS, EBSCO, Proquest, Microsoft Academic, and Pubmed</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="card h-100" style="border-radius: 1rem">
-                  <div class="card-body">
-                    <div class="text-left d-flex justify-content-between">
-                      <small id="proceeding_scopus_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['proceeding_scopus']->updated_at->format('j F Y') }}</small>
-                      <img src="{{ url('images/icons/proceeding.svg') }}" width="70">
-                    </div>
-                    <div class="font-weight-bold mb-3 odometer text-teal" id="proceeding_scopus">{{ $data['proceeding_scopus']->value }}</div>
-                    <div class="h5">Proceedings indexed in Scopus</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="card h-100" style="border-radius: 1rem">
-                  <div class="card-body">
-                    <div class="text-left d-flex justify-content-between">
-                      <small id="proceeding_other_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['proceeding_other']->updated_at->format('j F Y') }}</small>
-                      <img src="{{ url('images/icons/proceeding.svg') }}" width="70">
-                    </div>
-                    <div class="font-weight-bold mb-3 odometer text-teal" id="proceeding_other">{{ $data['proceeding_other']->value }}</div>
-                    <div class="h5">Proceedings indexed in WoS, EBSCO, Proquest, Microsoft Academic, and Pubmed</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row row-cards mt-0">
-              <div class="col-md-3">
-                <div class="card h-100" style="border-radius: 1rem">
-                  <div class="card-body">
-                    <div class="text-left d-flex justify-content-between">
-                      <small id="citation_scopus_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['citation_scopus']->updated_at->format('j F Y') }}</small>
-                      <img src="{{ url('images/icons/citation.svg') }}" width="70">
-                    </div>
-                    <div class="font-weight-bold mb-3 text-orange">
-                      <span class="odometer" id="citation_scopus">{{ $data['citation_scopus']->value }}</span>
-                      /
-                      <span class="odometer" style="font-size: 1.5rem;" id="total_citation">{{ $data['total_citation']->value }}</span>
-                    </div>
-                    <div class="h5">Citations on Scopus in {{ date('Y') }} and accumulation</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="card h-100" style="border-radius: 1rem">
-                  <div class="card-body">
-                    <div class="text-left d-flex justify-content-between">
-                      <small id="book_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['book']->updated_at->format('j F Y') }}</small>
-                      <img src="{{ url('images/icons/book.svg') }}" width="70">
-                    </div>
-                    <div class="font-weight-bold mb-3 odometer text-red" id="book">{{ $data['book']->value }}</div>
-                    <div class="h5">Books published</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="card h-100" style="border-radius: 1rem">
-                  <div class="card-body">
-                    <div class="text-left d-flex justify-content-between">
-                      <small id="copyright_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['copyright']->updated_at->format('j F Y') }}</small>
-                      <img src="{{ url('images/icons/copyright.svg') }}" width="70">
-                    </div>
-                    <div class="font-weight-bold mb-3 odometer text-indigo" id="copyright">{{ $data['copyright']->value }}</div>
-                    <div class="h5">Copyrights registered</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="card h-100" style="border-radius: 1rem">
-                  <div class="card-body">
-                    <div class="text-left d-flex justify-content-between">
-                      <small id="sinta_account_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ $data['sinta_account']->updated_at->format('j F Y') }}</small>
-                      <img src="{{ url('images/icons/account.svg') }}" width="70">
-                    </div>
-                    <div class="font-weight-bold mb-3 text-success">
-                      <span class="odometer" id="sinta_account">{{ $data['sinta_account']->value }}</span>
-                      <span>/</span>
-                      <span class="odometer" style="font-size: 1.5rem !important;" id="total_staff">{{ $data['total_staff']->value }}</span>
-                    </div>
-                    <div class="h5">Verified Sinta accounts and total UGM staff</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <achievement-base 
+            :initial-achievements="{{ json_encode($data) }}"
+            base-url="{{ url('/') }}"
+            ></achievement-base>
           </div>
         </div>
       </div>
@@ -181,5 +76,7 @@
         </div>
       </footer>
     </div>
+    {{-- Main App Js --}}
+    <script src="{{ url(mix('js/app.js')) }}"></script>
   </body>
 </html>

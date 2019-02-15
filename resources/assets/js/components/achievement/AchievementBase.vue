@@ -2,11 +2,21 @@
   <div class="row row-cards">
     <div class="col-md-3" v-for="item in achievementItems">
       <achievement-item
-      :achievement-value="item.value"
+      :achievement-value="getItem(item.name).value"
       :icon="item.icon"
-      :achievement-title="item.title"
+      :achievement-title="item.description"
       :text-color="item.textColor"
-      :achievement-date="item.date"
+      :achievement-date="getItem(item.name).updated_at"
+      ></achievement-item>
+    </div>
+    <div class="col-md-3" v-for="item in achievementsItemsDouble">
+      <achievement-item
+      :achievement-value="getItem(item.name).value"
+      :achievement-value-secondary="getItem(item.secondaryName).value"
+      :icon="item.icon"
+      :achievement-title="item.description"
+      :text-color="item.textColor"
+      :achievement-date="getItem(item.name).updated_at"
       ></achievement-item>
     </div>
   </div>
@@ -19,7 +29,7 @@ export default {
 
   name: 'AchievementBase',
   props: {
-  	initialAchievements: Object,
+  	initialAchievements: Array,
     baseUrl: String,
   },
   data () {
@@ -31,18 +41,64 @@ export default {
     achievementItems: function () {
       return [
         {
-          title: "Publication indexed in Scopus",
-          value: this.achievements.article_scopus.value + this.achievements.proceeding_scopus.value,
-          icon: this.getUrl("/images/icons/proceeding.svg"),
+          description: "Publications indexed in Scopus",
+          name: "publication_scopus",
+          icon: this.getUrl("/images/icons/journal.svg"),
           textColor: "text-primary",
-          date: this.achievements.article_scopus.updated_at
+        },{
+          description: "Publications indexed in Web of Science",
+          name: "publication_wos",
+          icon: this.getUrl("/images/icons/journal.svg"),
+          textColor: "text-primary",
+        },{
+          description: "Publications indexed in Microsoft Academic",
+          name: "publication_ma",
+          icon: this.getUrl("/images/icons/journal.svg"),
+          textColor: "text-primary",
+        },{
+          description: "Publication indexed in PubMed, ProQuest, and EBSCO",
+          name: "publication_other",
+          icon: this.getUrl("/images/icons/journal.svg"),
+          textColor: "text-primary",
+        },{
+          description: "Books Published",
+          name: "book",
+          icon: this.getUrl("/images/icons/book.svg"),
+          textColor: "text-red",
+        }, {
+          description: "Journals indexed in Scopus",
+          name: "journal_scopus",
+          icon: this.getUrl("/images/icons/proceeding.svg"),
+          textColor: "text-teal",
         }
+      ]
+    },
+    achievementsItemsDouble: function () {
+      return [
+        {
+          description: "Citations on Scopus in 2018 and accumulation",
+          name: "citation_scopus",
+          icon: this.getUrl("/images/icons/citation.svg"),
+          textColor: "text-orange",
+          secondaryName: "total_citation",
+        },{
+          description: "Verified Sinta accounts and total UGM staff",
+          name: "sinta_account",
+          icon: this.getUrl("/images/icons/account.svg"),
+          textColor: "text-green",
+          secondaryName: "total_staff",
+        },
       ]
     }
   },
   methods: {
     getUrl(url) {
       return this.baseUrl+url
+    },
+    getItem(name) {
+      return this.achievements.find(element => {
+        return element.name == name
+      });
     }
   },
   components: {
