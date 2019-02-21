@@ -20,6 +20,10 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
-        "toastr": "^2.1.4"
+        "gsap": "^2.0.2",
+        "laravel-echo": "^1.5.2",
+        "pusher-js": "^4.3.1",
+        "toastr": "^2.1.4",
+        "vue-moment": "^4.0.0"
     }
 }
