@@ -33,6 +33,6 @@ class DashboardUpdated implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return ['dashboard-updated'];
+        return ['dashboard'];
     }
 }
