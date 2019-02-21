@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Achievement;
 use App\Jobs\UpdateScopusArticle;
 use App\Repositories\ScopusRepository;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -26,9 +27,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data = Achievement::getData();
+        $achievements = Achievement::where('automated', false)->get();
 
-        return view('dashboard.index', compact('data'));
+        return view('dashboard.index', compact('achievements'));
     }
 
     public function update(Request $request)
@@ -42,14 +43,5 @@ class HomeController extends Controller
         }
         
         return redirect()->route('home')->with('status', 'Update data success');
-    }
-
-    public function scopus()
-    {
-        // $repository = new ScopusRepository;
-        // $data = $repository->search();
-
-        // return $data;
-        UpdateScopusArticle::dispatch();
     }
 }

@@ -73,8 +73,14 @@
             @yield('content')
         </main>
     </div>
+    <script>
+      window.config = {
+        pusherAppKey: '{{ env('PUSHER_APP_KEY') }}',
+      }
+    </script>
 
     @yield('script')
+    @include('script.config')
 
 </body>
 </html>

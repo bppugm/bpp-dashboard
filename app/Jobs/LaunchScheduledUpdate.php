@@ -2,17 +2,17 @@
 
 namespace App\Jobs;
 
-use App\Achievement;
-use App\Repositories\ScopusRepository;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
-class UpdateScopusArticle implements ShouldQueue
+class LaunchScheduledUpdate implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+
+    public $repo;
 
     /**
      * Create a new job instance.
@@ -21,7 +21,7 @@ class UpdateScopusArticle implements ShouldQueue
      */
     public function __construct()
     {
-
+        $this->repo = resolve('App\Repositories\ScheduledUpdatesRepository');
     }
 
     /**
@@ -31,11 +31,6 @@ class UpdateScopusArticle implements ShouldQueue
      */
     public function handle()
     {
-        $repo = new ScopusRepository;
-        $article = $repo->getArticle();
-
-        Achievement::where('name', 'publication_scopus')->first()->update([
-            'value' => $article
-        ]);
+        $this->repo->update();
     }
 }

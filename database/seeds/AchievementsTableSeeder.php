@@ -12,15 +12,18 @@ class AchievementsTableSeeder extends Seeder
      */
     public function run()
     {
-        Achievement::create(['category_id' => 1, 'name' => 'article_scopus', 'value' => 195]);
-        Achievement::create(['category_id' => 1, 'name' => 'article_other', 'value' => 364]);
-        Achievement::create(['category_id' => 2, 'name' => 'proceeding_scopus', 'value' => 101]);
-        Achievement::create(['category_id' => 2, 'name' => 'proceeding_other', 'value' => 2]);
-        Achievement::create(['category_id' => 3, 'name' => 'book', 'value' => 73]);
-        Achievement::create(['category_id' => 4, 'name' => 'citation_scopus', 'value' => 1838]);
-        Achievement::create(['category_id' => 4, 'name' => 'total_citation', 'value' => 62093]);
-        Achievement::create(['category_id' => 4, 'name' => 'copyright', 'value' => 65]);
-        Achievement::create(['category_id' => 4, 'name' => 'sinta_account', 'value' => 2081]);
+        Achievement::truncate();
+        
+        Achievement::create(['category_id' => 1, 'name' => 'publication_scopus', 'value' => 195, 'automated' => true]);
+        Achievement::create(['category_id' => 1, 'name' => 'publication_wos', 'value' => 1146]);
+        Achievement::create(['category_id' => 2, 'name' => 'publication_ma', 'value' => 2146]);
+        Achievement::create(['category_id' => 2, 'name' => 'publication_other', 'value' => 814]);
+        Achievement::create(['category_id' => 3, 'name' => 'book', 'value' => 153]);
+        Achievement::create(['category_id' => 4, 'name' => 'citation_scopus', 'value' => 7805]);
+        Achievement::create(['category_id' => 4, 'name' => 'total_citation', 'value' => 81153, 'automated' => true]);
+        Achievement::create(['category_id' => 4, 'name' => 'journal_scopus', 'value' => 5]);
+        Achievement::create(['category_id' => 4, 'name' => 'journal_wos', 'value' => 4]);
+        Achievement::create(['category_id' => 4, 'name' => 'sinta_account', 'value' => 2788, 'automated' => true]);
         Achievement::create(['category_id' => 4, 'name' => 'total_staff', 'value' => 2793]);
     }
 }

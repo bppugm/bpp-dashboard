@@ -18,16 +18,7 @@ class ScopusController extends Controller
     {
         $article = $this->repository->getArticle();
 
-        $achievement = tap(Achievement::where('name', 'article_scopus')->first())->update(['value' => $article]);
-
-        return $achievement;
-    }
-
-    public function proceeding()
-    {
-        $proceeding = $this->repository->getProceeding();
-
-        $achievement = tap(Achievement::where('name', 'proceeding_scopus')->first())->update(['value' => $proceeding]);
+        $achievement = tap(Achievement::where('name', 'publication_scopus')->first())->update(['value' => $article]);
 
         return $achievement;
     }
