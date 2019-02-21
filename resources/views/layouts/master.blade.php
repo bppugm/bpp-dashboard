@@ -60,6 +60,8 @@
       @include('layouts.footer')
 
     </div>
+    @include('script.config')
+
     {{-- Main App Js --}}
     <script src="{{ url(mix('js/app.js')) }}"></script>
   </body>
