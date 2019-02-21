@@ -23,7 +23,7 @@ class ScopusRepository extends GuzzleService
     public function getArticle()
     {
         $this->query = [
-            'query' => 'pubdatetxt(2018)AF-ID(60069380) AND NOT DOCTYPE(cp)',
+            'query' => 'pubdatetxt(2018)AF-ID(60069380)',
             'count' => 1,
         ];
 
