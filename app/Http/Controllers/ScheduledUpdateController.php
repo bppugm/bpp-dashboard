@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Achievement;
 use App\FailedJob;
+use App\Repositories\ScheduledUpdatesRepository;
 use Illuminate\Http\Request;
 
 class ScheduledUpdateController extends Controller
@@ -15,12 +16,17 @@ class ScheduledUpdateController extends Controller
     
     public function index()
     {
-        $data = Achievement::getData();
+        $achievements = Achievement::where('automated', true)->get();
         $jobs = FailedJob::orderBy('failed_at', 'desc')->get();
-
-        // return $jobs;
         
-        return view('dashboard.scheduled', compact('data', 'jobs'));
+        return view('dashboard.scheduled', compact('achievements', 'jobs'));
+    }
+
+    public function update(ScheduledUpdatesRepository $repo)
+    {
+        $response = $repo->update();
+
+        return $response;
     }
 
     public function clear()
