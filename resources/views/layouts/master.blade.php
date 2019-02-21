@@ -17,6 +17,8 @@
     <meta name="msapplication-config" content="{{url('favicons/browserconfig.xml')}}">
     <meta name="theme-color" content="#ffffff">
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
 
     <!-- Generated: 2018-03-27 13:25:03 +0200 -->
     <title>{{ env('APP_NAME') }}</title>
@@ -28,14 +30,14 @@
     <!-- Odometr includes -->
     {{-- <link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-car.css" /> --}}
     {{-- <script src="http://github.hubspot.com/odometer/odometer.js"></script> --}}
-    <script src="js/odometer.min.js"></script>
-    <link rel="stylesheet" href="css/odometer-theme-default.css"/>
+    {{-- <script src="js/odometer.min.js"></script> --}}
+    {{-- <link rel="stylesheet" href="css/odometer-theme-default.css"/> --}}
 
     {{-- PUSHER LIBRARY --}}
-    <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+    {{-- <script src="https://js.pusher.com/4.1/pusher.min.js"></script> --}}
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-    @include('script.pusher')
+    {{-- @include('script.pusher') --}}
 
     <style type="text/css">
       .odometer {
@@ -48,33 +50,15 @@
     <div class="page" id="app">
       <div class="page-main">
         <div class="page-content mt-0">
-          <div class="container-fluid">
-            <div class="row pb-5 mb-5">
-              <div class="col-12 py-2 d-flex align-items-center justify-content-center">
-                <img src="{{ url('images/logos/signature-logo-ugm.svg') }}" width="75" class="mr-3">
-                <h1 class="page-title text-primary display-4 font-weight-bold" style="font-size: 3rem;">
-                  UGM's 2018 Achievements Minute by Minute
-                </h1>
-              </div>
-            </div>
-            <achievement-base 
-            :initial-achievements="{{ json_encode($data) }}"
-            base-url="{{ url('/') }}"
-            ></achievement-base>
-          </div>
+          <!-- CONTENT -->
+          @yield('content')
+
         </div>
       </div>
-      <footer class="footer" style="font-size: 1rem">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="col-12 mt-3 mt-lg-0 text-center">
-              <a href="#">About</a> | <a href="#">Site Credits</a> | <a href="#">BPP UGM</a> <br>
-              Copyright © 2018 <a href="http://publikasi.ugm.ac.id" target="_blank">Badan Penerbit dan Publikasi UGM</a>. 
-              {{-- Theme by <a href="https://codecalm.net" target="_blank">codecalm.net</a>. --}}
-            </div>
-          </div>
-        </div>
-      </footer>
+
+      {{-- FOOTER --}}
+      @include('layouts.footer')
+
     </div>
     {{-- Main App Js --}}
     <script src="{{ url(mix('js/app.js')) }}"></script>

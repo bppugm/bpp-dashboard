@@ -8,34 +8,12 @@
       </div>
       <div class="col-md-9">
         <div class="card">
-          <div class="card-header">Achivement data</div>
+          <div class="card-header">Achievements data</div>
           <div class="card-body">
-            <form method="POST" action="{{ route('home.update') }}">
-              @csrf
-              @method('PUT')
-              <div class="alert alert-info">
-                These fields below have implemented Scheduled Update. However, it is possible to run update at anytime.
-              </div>
-              <div id="article_scopus" class="form-group">
-                <label for="staticEmail" class="form-label">Journal articles indexed in Scopus</label>
-                <input type="number" class="form-control" disabled value="{{ $data['article_scopus']->value }}">
-                <small id="article_scopus_date" class="text-muted float-right"><i class="far fa-clock fa-fw"></i> {{ $data['article_scopus']->updated_at->format('j F Y h:i') }}</small>
-                <div class="valid-feedback">
-                  
-                </div>
-              </div>
-              <div id="proceeding_scopus" class="form-group">
-                <label for="staticEmail" class="form-label">Proceedings indexed in Scopus</label>
-                <input type="number" class="form-control" disabled value="{{ $data['proceeding_scopus']->value }}">
-                <small id="proceeding_scopus_date" class="text-muted float-right"><i class="far fa-clock fa-fw"></i> {{ $data['proceeding_scopus']->updated_at->format('j F Y h:i') }}</small>
-                <div class="valid-feedback">
-                  
-                </div>
-              </div>
-              <div class="form-group">
-                <button class="btn btn-success" type="button" onclick="checkUpdates()">Check for updates</button>
-              </div>
-            </form>
+            <scheduled-form-base 
+            :initial-achievements="{{ json_encode($achievements) }}"
+            update-url="{{ route('scheduled.update') }}"
+            ></scheduled-form-base>
           </div>
         </div>
         <div class="card mt-3">
@@ -127,8 +105,7 @@
 
     function setEndpoints() {
       return {
-        article_scopus: '{{ url('scopus/article') }}',
-        proceeding_scopus: '{{ url('scopus/proceeding') }}'
+        publication_scopus: '{{ url('scopus/article') }}',
       }
     }
 
