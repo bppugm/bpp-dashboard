@@ -65,17 +65,18 @@ export default {
           name: "book",
           icon: this.getUrl("/images/icons/book.svg"),
           textColor: "text-red",
-        }, {
-          description: "Journals indexed in Scopus",
-          name: "journal_scopus",
-          icon: this.getUrl("/images/icons/proceeding.svg"),
-          textColor: "text-teal",
         }
       ]
     },
     achievementsItemsDouble: function () {
       return [
         {
+          description: "Journals indexed in Scopus & in Web of Science",
+          name: "journal_scopus",
+          icon: this.getUrl("/images/icons/proceeding.svg"),
+          textColor: "text-teal",
+          secondaryName: "journal_wos",
+        },{
           description: "Citations on Scopus in 2018 and accumulation",
           name: "citation_scopus",
           icon: this.getUrl("/images/icons/citation.svg"),
