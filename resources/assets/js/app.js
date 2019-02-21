@@ -16,6 +16,7 @@ window.Vue = require('vue');
  */
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('AchievementBase', require('./components/achievement/AchievementBase.vue'));
+Vue.component('ScheduledFormBase', require('./components/scheduled/ScheduledFormBase.vue'));
 
 Vue.use(require('vue-moment'));
 

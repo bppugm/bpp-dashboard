@@ -99,7 +99,23 @@ export default {
       return this.achievements.find(element => {
         return element.name == name
       });
+    },
+    subscribe() {
+      Echo.channel('dashboard')
+        .listen('DashboardUpdated', (e) => {
+            this.updateAchievement(e.data)
+        });
+    },
+    updateAchievement(data) {
+      let index = this.achievements.findIndex(element => {
+        return element.name == data.name
+      })
+
+      this.$set(this.achievements, index, data)
     }
+  },
+  mounted() {
+    this.subscribe()
   },
   components: {
     AchievementItem
