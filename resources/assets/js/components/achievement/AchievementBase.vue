@@ -103,9 +103,13 @@ export default {
     },
     subscribe() {
       Echo.channel('dashboard')
-        .listen('DashboardUpdated', (e) => {
-            this.updateAchievement(e.data)
-        });
+      .listen('DashboardUpdated', (e) => {
+        this.updateAchievement(e.data)
+      });
+
+      Echo.connector.pusher.connection.bind('unavailable', () => {
+        this.handleConnectionError()
+      })
     },
     updateAchievement(data) {
       let index = this.achievements.findIndex(element => {
@@ -113,6 +117,11 @@ export default {
       })
 
       this.$set(this.achievements, index, data)
+    },
+    handleConnectionError(){
+      toastr.error('Please check your internet connection and reload this page', 'Disconnected', {
+        timeOut: 0,
+      })
     }
   },
   mounted() {
