@@ -30,12 +30,21 @@ export default {
   methods: {
     async updateManually() {
       this.loading = true
-      let response = await axios.put(this.updateUrl)
-      console.log(response.data)
 
-      response.data.forEach((element, index) => {
-        this.achievements.splice(index, 1, element)
-      })
+      toastr.info('Please wait a moment', 'Updating data')
+
+      try {
+        let response = await axios.put(this.updateUrl)
+        console.log(response.data)
+
+        response.data.forEach((element, index) => {
+          this.achievements.splice(index, 1, element)
+        })
+
+        toastr.success('The data has been updated!')
+      } catch(error) {
+        toastr.error('Sorry, something went wrong. Please try again later.', 'Ooops!')
+      }
 
       this.loading = false
     }
