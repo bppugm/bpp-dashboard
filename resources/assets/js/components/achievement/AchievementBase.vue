@@ -1,5 +1,5 @@
 <template>
-  <div class="row row-cards">
+  <div class="row row-cards justify-content-center">
     <div class="col-md-3" v-for="item in achievementItems">
       <achievement-item
       :achievement-value="getItem(item.name).value"
@@ -65,29 +65,27 @@ export default {
           name: "book",
           icon: this.getUrl("/images/icons/book.svg"),
           textColor: "text-red",
+        },{
+          description: "Journal Indexed in Scopus",
+          name: "journal_scopus",
+          icon: this.getUrl("/images/icons/proceeding.svg"),
+          textColor: "text-teal",
+        },{
+          description: "Journal Indexed in Web of Science",
+          name: "journal_wos",
+          icon: this.getUrl("/images/icons/proceeding.svg"),
+          textColor: "text-teal",
         }
       ]
     },
     achievementsItemsDouble: function () {
       return [
         {
-          description: "Journals indexed in Scopus & in Web of Science",
-          name: "journal_scopus",
-          icon: this.getUrl("/images/icons/proceeding.svg"),
-          textColor: "text-teal",
-          secondaryName: "journal_wos",
-        },{
-          description: "Citations on Scopus in 2018 and accumulation",
+          description: "Citations on Scopus in 2019 and accumulation",
           name: "citation_scopus",
           icon: this.getUrl("/images/icons/citation.svg"),
           textColor: "text-orange",
           secondaryName: "total_citation",
-        },{
-          description: "Verified Sinta accounts and total UGM staff",
-          name: "sinta_account",
-          icon: this.getUrl("/images/icons/account.svg"),
-          textColor: "text-green",
-          secondaryName: "total_staff",
         },
       ]
     }
