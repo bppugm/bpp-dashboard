@@ -46,7 +46,7 @@ export default {
           icon: this.getUrl("/images/icons/journal.svg"),
           textColor: "text-primary",
         },{
-          description: "Publications indexed in Web of Science",
+          description: "Publications indexed in ESCI Clarivate Analytics Web of Science",
           name: "publication_wos",
           icon: this.getUrl("/images/icons/journal.svg"),
           textColor: "text-primary",
