@@ -19,7 +19,7 @@ class PublicationMaClient extends MicrosoftAcademicBase
 	{
 		$response = $this->client->post('calchistogram', [
 			'form_params' => [
-				'expr' => "AND(Composite(AA.AfN=='gadjah mada university'),Y=2019)"
+				'expr' => "AND(Composite(AA.AfN=='gadjah mada university'),Y=2019,L='en')"
 			]
 		]);
 
