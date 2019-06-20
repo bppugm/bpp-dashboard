@@ -10,9 +10,9 @@ class PublicationMaClient extends MicrosoftAcademicBase
 	public function fetchData()
 	{
 		$allPublication = $this->getAllPublications();
-		$indonesianPublication = $this->getIndonesianPublication();
+		// $indonesianPublication = $this->getIndonesianPublication();
 
-		return $allPublication - $indonesianPublication;
+		return $allPublication;
 	}
 
 	protected function getAllPublications()
