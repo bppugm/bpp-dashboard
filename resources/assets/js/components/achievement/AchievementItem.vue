@@ -2,7 +2,7 @@
 	<div class="card h-100" style="border-radius: 1rem">
 	  <div class="card-body">
 	    <div class="text-left d-flex justify-content-between">
-	      <small id="proceeding_scopus_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> {{ achievementDate | moment('DD MMMM YYYY') }}</small>
+	      <small id="proceeding_scopus_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> </small>
 	      <img :src="icon" width="70">
 	    </div>
 	    <h1 class="font-weight-bold mb-3 value" :class="textColor">
