@@ -14,9 +14,9 @@ window.Vue = require('vue');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('AchievementBase', require('./components/achievement/AchievementBase.vue'));
-Vue.component('ScheduledFormBase', require('./components/scheduled/ScheduledFormBase.vue'));
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('AchievementBase', require('./components/achievement/AchievementBase.vue').default);
+Vue.component('ScheduledFormBase', require('./components/scheduled/ScheduledFormBase.vue').default);
 
 Vue.use(require('vue-moment'));
 
