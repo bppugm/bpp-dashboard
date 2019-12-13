@@ -1,5 +1,6 @@
 <template>
   <div class="row row-cards justify-content-center">
+    <connection-status style="position: fixed; top: 0px; right: 10px; opacity: 0.8" :is-connected="isConnected"></connection-status>
     <div class="col-md-3" v-for="item in achievementItems">
       <achievement-item
       :achievement-value="getItem(item.name).value"
@@ -34,7 +35,8 @@ export default {
   },
   data () {
     return {
-      achievements: this.initialAchievements
+      achievements: this.initialAchievements,
+      isConnected: false,
     }
   },
   computed: {
@@ -106,7 +108,11 @@ export default {
       });
 
       Echo.connector.pusher.connection.bind('unavailable', () => {
-        this.handleConnectionError()
+        this.handleConnection(false)
+      })
+
+      Echo.connector.pusher.connection.bind('connected', () => {
+        this.handleConnection(true)
       })
     },
     updateAchievement(data) {
@@ -116,10 +122,8 @@ export default {
 
       this.$set(this.achievements, index, data)
     },
-    handleConnectionError(){
-      toastr.error('Please check your internet connection and reload this page', 'Disconnected', {
-        timeOut: 0,
-      })
+    handleConnection(status){
+      this.isConnected = status
     }
   },
   mounted() {

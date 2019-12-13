@@ -18,6 +18,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('AchievementBase', require('./components/achievement/AchievementBase.vue').default);
 Vue.component('ScheduledFormBase', require('./components/scheduled/ScheduledFormBase.vue').default);
 
+Vue.component('ConnectionStatus', require('./components/ConnectionStatus').default)
+
 Vue.use(require('vue-moment'));
 
 const app = new Vue({
