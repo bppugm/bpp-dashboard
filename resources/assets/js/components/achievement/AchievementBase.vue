@@ -36,7 +36,7 @@ export default {
   data () {
     return {
       achievements: this.initialAchievements,
-      isConnected: false,
+      isConnected: true,
     }
   },
   computed: {
@@ -90,6 +90,13 @@ export default {
           secondaryName: "total_citation",
         },
       ]
+    }
+  },
+  watch: {
+    isConnected(newValue, oldValue) {
+      if (newValue === true && oldValue === false) {
+        location.reload()
+      }
     }
   },
   methods: {
