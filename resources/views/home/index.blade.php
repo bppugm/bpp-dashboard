@@ -4,7 +4,7 @@
   <div class="container-fluid">
     <div class="row pb-5 mb-5 justify-content-center">
       <div class="col-12 col-md-8 py-2">
-        <img src="{{ url('images/logos/logo-text-ugm.svg') }}" class="img-fluid">
+        <img src="{{ url('images/logos/logo-text-ugm.svg?v=2') }}" class="img-fluid">
       </div>
     </div>
     <achievement-base 

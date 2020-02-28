@@ -58,15 +58,22 @@ export default {
           icon: this.getUrl("/images/icons/journal.svg"),
           textColor: "text-primary",
         },{
-          description: "Publication indexed in PubMed, ProQuest, and EBSCO",
+          description: "Publication indexed in SINTA 2 - 6",
           name: "publication_other",
           icon: this.getUrl("/images/icons/journal.svg"),
           textColor: "text-primary",
-        },{
-          description: "Books Published",
-          name: "book",
-          icon: this.getUrl("/images/icons/book.svg"),
-          textColor: "text-red",
+        },
+        // {
+        //   description: "Book Published",
+        //   name: "book",
+        //   icon: this.getUrl("/images/icons/book.svg"),
+        //   textColor: "text-red",
+        // },
+        {
+          description: "Journal Indexed in Sinta",
+          name: "journal_sinta",
+          icon: this.getUrl("/images/icons/proceeding.svg"),
+          textColor: "text-teal",
         },{
           description: "Journal Indexed in Scopus",
           name: "journal_scopus",
@@ -83,7 +90,7 @@ export default {
     achievementsItemsDouble: function () {
       return [
         {
-          description: "Citations on Scopus in 2019 and accumulation",
+          description: "Citations on Scopus in 2020 and accumulation",
           name: "citation_scopus",
           icon: this.getUrl("/images/icons/citation.svg"),
           textColor: "text-orange",

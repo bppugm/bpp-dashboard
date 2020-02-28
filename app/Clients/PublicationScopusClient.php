@@ -12,7 +12,7 @@ class PublicationScopusClient extends ScopusClientBase implements ClientInterfac
 		$response = $this->client->get('content/search/scopus', [
 			'query' => [
 				// 'query' => 'pubdatetxt(2019)AF-ID(60069380) AND (SRCTYPE(j) OR SRCTYPE(p))',
-				'query' => 'pubdatetxt(2019)AF-ID(60069380)',
+				'query' => 'pubdatetxt(2020)AF-ID(60069380)',
             	'count' => 1,
 			]
 		]);
