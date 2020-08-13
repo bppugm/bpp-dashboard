@@ -10,10 +10,21 @@
       :achievement-date="getItem(item.name).updated_at"
       ></achievement-item>
     </div>
-    <div class="col-md-3" v-for="item in achievementsItemsDouble">
+    <!-- <div class="col-md-3" v-for="item in achievementsItemsDouble">
       <achievement-item
       :achievement-value="getItem(item.name).value"
       :achievement-value-secondary="getItem(item.secondaryName).value"
+      :icon="item.icon"
+      :achievement-title="item.description"
+      :text-color="item.textColor"
+      :achievement-date="getItem(item.name).updated_at"
+      ></achievement-item>
+    </div> -->
+    <div class="col-md-3" v-for="item in achievementsItemsTriple">
+      <achievement-item
+      :achievement-value="getItem(item.name).value"
+      :achievement-value-secondary="getItem(item.secondaryName).value"
+      :achievement-value-third="getItem(item.thirdName).value"
       :icon="item.icon"
       :achievement-title="item.description"
       :text-color="item.textColor"
@@ -87,14 +98,26 @@ export default {
         }
       ]
     },
-    achievementsItemsDouble: function () {
+    // achievementsItemsDouble: function () {
+    //   return [
+    //     {
+    //       description: "Citations on Scopus in 2019, 2020 and accumulation",
+    //       name: "citation_scopus",
+    //       icon: this.getUrl("/images/icons/citation.svg"),
+    //       textColor: "text-orange",
+    //       secondaryName: "total_citation",
+    //     },
+    //   ]
+    // },
+    achievementsItemsTriple: function () {
       return [
         {
-          description: "Citations on Scopus in 2020 and accumulation",
+          description: "Citations on Scopus in 2019, 2020 and accumulation",
           name: "citation_scopus",
           icon: this.getUrl("/images/icons/citation.svg"),
           textColor: "text-orange",
-          secondaryName: "total_citation",
+          secondaryName: "citation_scopus2",
+          thirdName: "total_citation",
         },
       ]
     }

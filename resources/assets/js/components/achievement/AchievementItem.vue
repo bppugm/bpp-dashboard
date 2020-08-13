@@ -5,10 +5,11 @@
 	      <small id="proceeding_scopus_date" class="text-muted"><i class="fa fa-cloud-upload-alt fa-fw"></i> </small>
 	      <img :src="icon" width="70">
 	    </div>
-	    <h1 class="font-weight-bold mb-3 value" :class="textColor">
+	    <h2 class="font-weight-bold mb-3 value" :class="textColor">
         {{ animatedNumber }}
         <span v-if="achievementValueSecondary"> / {{ animatedNumberSecondary }}</span>
-      </h1>
+        <span v-if="achievementValueThird"> / {{ animatedNumberThird }}</span>
+      </h2>
 	    <div class="h4 thin">{{ achievementTitle }}</div>
 	  </div>
 	</div>
@@ -21,6 +22,7 @@ export default {
   props: {
   	achievementValue: Number,
     achievementValueSecondary: Number,
+    achievementValueThird: Number,
   	icon: String,
   	achievementTitle: String,
   	textColor: String,
@@ -30,6 +32,7 @@ export default {
     return {
       tweenedNumber: this.achievementValue,
       tweenedNumberSecondary: this.achievementValueSecondary,
+      tweenedNumberThird: this.achievementValueThird,
     }
   },
   computed: {
@@ -38,6 +41,9 @@ export default {
     },
     animatedNumberSecondary: function () {
       return this.tweenedNumberSecondary.toFixed(0)
+    },
+    animatedNumberThird: function () {
+      return this.tweenedNumberThird.toFixed(0)
     }
   },
   watch: {
@@ -46,6 +52,9 @@ export default {
     },
     achievementValueSecondary: function (newValue) {
       TweenLite.to(this.$data, 1, { tweenedNumberSecondary: newValue })
+    },
+    achievementValueThird: function (newValue) {
+      TweenLite.to(this.$data, 1, { tweenedNumberThird: newValue })
     }
   }
 }
