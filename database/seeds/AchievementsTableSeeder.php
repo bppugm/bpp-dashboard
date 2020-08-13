@@ -25,5 +25,8 @@ class AchievementsTableSeeder extends Seeder
         Achievement::create(['category_id' => 4, 'name' => 'journal_wos', 'value' => 4]);
         Achievement::create(['category_id' => 4, 'name' => 'sinta_account', 'value' => 2788, 'automated' => true]);
         Achievement::create(['category_id' => 4, 'name' => 'total_staff', 'value' => 2793]);
+        Achievement::create(['category_id' => 4, 'name' => 'journal_sinta', 'value' =>
+        0]);
+        Achievement::create(['category_id' => 4, 'name' => 'citation_scopus2', 'value' => 0]);
     }
 }
