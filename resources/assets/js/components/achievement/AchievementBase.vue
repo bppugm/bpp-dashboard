@@ -58,13 +58,15 @@ export default {
           name: "publication_scopus",
           icon: this.getUrl("/images/icons/journal.svg"),
           textColor: "text-primary",
-        },{
-          description: "Publications indexed in Web of Science",
-          name: "publication_wos",
-          icon: this.getUrl("/images/icons/journal.svg"),
-          textColor: "text-primary",
-        },{
-          description: "Publications indexed in Microsoft Academic",
+        },
+        // {
+        //   description: "Publications indexed in Web of Science",
+        //   name: "publication_wos",
+        //   icon: this.getUrl("/images/icons/journal.svg"),
+        //   textColor: "text-primary",
+        // },
+        {
+          description: "Publications on Biodiversity and Cultural Diversity",
           name: "publication_ma",
           icon: this.getUrl("/images/icons/journal.svg"),
           textColor: "text-primary",
@@ -73,14 +75,12 @@ export default {
           name: "publication_other",
           icon: this.getUrl("/images/icons/journal.svg"),
           textColor: "text-primary",
-        },
-        // {
-        //   description: "Book Published",
-        //   name: "book",
-        //   icon: this.getUrl("/images/icons/book.svg"),
-        //   textColor: "text-red",
-        // },
-        {
+        },{
+          description: "Published Books",
+          name: "book",
+          icon: this.getUrl("/images/icons/book.svg"),
+          textColor: "text-red",
+        },{
           description: "Journal Indexed in Sinta",
           name: "journal_sinta",
           icon: this.getUrl("/images/icons/proceeding.svg"),
