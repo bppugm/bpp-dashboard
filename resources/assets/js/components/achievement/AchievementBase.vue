@@ -76,7 +76,7 @@ export default {
           icon: this.getUrl("/images/icons/journal.svg"),
           textColor: "text-primary",
         },{
-          description: "Published Book",
+          description: "Published Books",
           name: "book",
           icon: this.getUrl("/images/icons/book.svg"),
           textColor: "text-red",
