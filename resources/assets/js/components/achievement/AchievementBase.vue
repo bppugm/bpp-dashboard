@@ -64,7 +64,7 @@ export default {
           icon: this.getUrl("/images/icons/journal.svg"),
           textColor: "text-primary",
         },{
-          description: "Publications indexed in Microsoft Academic",
+          description: "Publication base on Diversity",
           name: "publication_ma",
           icon: this.getUrl("/images/icons/journal.svg"),
           textColor: "text-primary",
