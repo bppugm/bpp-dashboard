@@ -66,7 +66,7 @@ export default {
         //   textColor: "text-primary",
         // },
         {
-          description: "Publication base on Diversity",
+          description: "Publications on Biodiversity and Cultural Diversity",
           name: "publication_ma",
           icon: this.getUrl("/images/icons/journal.svg"),
           textColor: "text-primary",
@@ -76,7 +76,7 @@ export default {
           icon: this.getUrl("/images/icons/journal.svg"),
           textColor: "text-primary",
         },{
-          description: "Book Publication",
+          description: "Published Book",
           name: "book",
           icon: this.getUrl("/images/icons/book.svg"),
           textColor: "text-red",
