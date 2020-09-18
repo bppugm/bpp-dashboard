@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,8 +12,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', 'DashboardController@index')->name('dashboard.index');
 
 Auth::routes();
 
@@ -29,3 +29,16 @@ Route::group(['prefix' => 'scheduled'], function(){
     Route::post('/clear', 'ScheduledUpdateController@clear')->name('scheduled.clear');
     Route::put('/', 'ScheduledUpdateController@update')->name('scheduled.update');
 });
+
+Route::prefix('admin')->name('admin.')->middleware('auth')->group(function ()
+{
+    Route::prefix('dashboard')->name('dashboard.')->group(function ()
+    {
+        Route::get('/', 'Admin\DashboardController@index')->name('index');
+        Route::get('/{dashboard}', 'Admin\DashboardController@show')->name('show');
+        Route::put('/{dashboard}', 'Admin\DashboardController@update')->name('update');
+    });
+});
+
+Route::get('/', 'DashboardController@index')->name('dashboard.index');
+Route::get('/{dashboard}', 'DashboardController@show')->name('dashboard.show');
