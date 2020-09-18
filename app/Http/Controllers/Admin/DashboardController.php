@@ -13,7 +13,7 @@ class DashboardController extends Controller
     {
         $dashboards = Dashboard::latest()->paginate();
 
-        return $dashboards;
+        return view('admin.dashboard.index', compact('dashboards'));
     }
 
     public function store(Request $request)

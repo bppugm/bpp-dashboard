@@ -1,5 +1,6 @@
 <template>
   <div>
+    <dashboard-widget-edit-modal id="editWidget" :widget.sync="widgets[editedWidget]" :achievements="achievements"></dashboard-widget-edit-modal>
     <grid-layout
       :layout.sync="widgets"
       :row-height="30"
@@ -22,13 +23,16 @@
         <div class="text-left d-flex justify-content-between">
           <span class="text-muted" v-if="isEditable">
             <i class="fa fa-trash text-danger fa-fw cursor-pointer" @click="removeWidget(key)"></i>
-            <i class="fa fa-edit cursor-pointer ml-1"></i>
+            <i class="fa fa-edit cursor-pointer ml-1" @click="editWidget(key)"></i>
           </span>
           <small v-else class="text-muted">
             <i class="fa fa-cloud-upload-alt fa-fw"></i>
           </small>
           <i class="fa fa-4x" :class="[item.icon_type, item.color]"></i>
         </div>
+        <h2 class="text-muted" v-if="getAchievementValues(item.achievement_id).length == 0">
+          No Values
+        </h2>
         <h2 class="font-weight-bold mb-3 value" :class="item.color">
           <span v-for="(value, key) in getAchievementValues(item.achievement_id)" :key="key">
             <dashboard-widget-value :widget-value="value"></dashboard-widget-value>
@@ -72,10 +76,11 @@ export default {
         color: "text-primary",
         icon_size: "",
         icon_type: "fa-archive",
-        achievement_id: [1, 2],
+        achievement_id: [],
       },
       widgets: [],
       editedWidget: null,
+      isLoading: false,
     };
   },
 
@@ -93,15 +98,16 @@ export default {
 
   methods: {
     async doUpdate() {
+      this.isLoading = true
       try {
         let response = await axios.put(this.updateUrl, {
           widgets: this.widgets,
         });
-
         console.log(response.data);
       } catch (error) {
         console.log(error.response);
       }
+      this.isLoading = false
     },
     addWidget() {
       this.initialLayout.i = Math.floor(Math.random() * 1000 + 1);
@@ -109,11 +115,15 @@ export default {
       this.widgets.push(widget);
     },
     removeWidget(key) {
-      if (!confirm("Are you sure?")) {
+      if (!confirm("You are going to remove a widget. Are you sure?")) {
         return;
       }
 
       this.widgets.splice(key, 1);
+    },
+    editWidget(key){
+      this.editedWidget = key
+      $('#editWidget').modal('show')
     },
     getAchievementValues(ids = []) {
       return this.achievements
