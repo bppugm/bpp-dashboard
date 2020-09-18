@@ -42,9 +42,10 @@
         <div class="h4 thin mt-auto">{{ item.description }}</div>
       </grid-item>
     </grid-layout>
-    <div class="text-right" v-if="isEditable">
+    <div class="text-right mt-2" v-if="isEditable">
       <button class="btn btn-outline-info" type="button" @click="addWidget()">Add Widget</button>
-      <button class="btn btn-success" type="button" @click="doUpdate()">Update Dashboard</button>
+      <button class="btn btn-success" v-if="!isLoading" type="button" @click="doUpdate()">Update Dashboard</button>
+      <button v-else class="btn btn-secondary" disabled>Updating...</button>
     </div>
   </div>
 </template>
@@ -103,7 +104,7 @@ export default {
         let response = await axios.put(this.updateUrl, {
           widgets: this.widgets,
         });
-        console.log(response.data);
+        toastr.success('Dashboard has been updated', 'Success')
       } catch (error) {
         console.log(error.response);
       }

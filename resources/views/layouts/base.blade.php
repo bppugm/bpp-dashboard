@@ -11,6 +11,9 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- Styles -->
+    <link href="{{ asset(mix('css/app.css')) }}" rel="stylesheet">
+    
     <!-- Scripts -->
     <script src="{{ asset(mix('js/app.js')) }}" defer></script>
 
@@ -18,9 +21,6 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
     <link rel="stylesheet" href="{{ asset('font-awesome/css/fontawesome-all.css') }}">
-
-    <!-- Styles -->
-    <link href="{{ asset(mix('css/app.css')) }}" rel="stylesheet">
 
 </head>
 
