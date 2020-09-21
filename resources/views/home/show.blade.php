@@ -7,6 +7,6 @@
             <img src="{{ url('images/logos/logo-text-ugm.svg?v=2') }}" class="img-fluid">
         </div>
     </div>
-    <dashboard-base :initial-achievements="{{ json_encode($achievements) }}" :widgets="{{ $dashboard->widgets }}"></dashboard-base>
+    <dashboard-base :dashboard-id="{{ $dashboard->id }}" :initial-achievements="{{ json_encode($achievements) }}" :widgets="{{ $dashboard->widgets }}"></dashboard-base>
 </div>
 @endsection

@@ -15,6 +15,7 @@ export default {
       default: [],
     },
     widgets: Array,
+    dashboardId: Number,
   },
 
   data() {
@@ -38,9 +39,19 @@ export default {
 
   methods: {
     subscribe() {
-      Echo.channel('dashboard')
-      .listen('DashboardUpdated', (e) => {
+      Echo.channel('achievement')
+      .listen('AchievementUpdated', (e) => {
         this.updateAchievement(e.data)
+      });
+
+      Echo.channel(`dashboard.${this.dashboardId}`)
+      .listen('DashboardUpdated', (e) => {
+        location.reload()
+      });
+
+      Echo.channel(`dashboard`)
+      .listen('DashboardActivated', (e) => {
+        location.reload()
       });
 
       Echo.connector.pusher.connection.bind('unavailable', () => {

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Achievement;
 use App\Dashboard;
+use App\Events\DashboardActivated;
+use App\Events\DashboardUpdated;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -45,6 +47,8 @@ class DashboardController extends Controller
         
         $dashboard->update($data);
 
+        event(new DashboardUpdated($dashboard->fresh()));
+
         return $dashboard->fresh();
     }
 
@@ -53,6 +57,8 @@ class DashboardController extends Controller
         Dashboard::where('is_active', true)->update(['is_active' => false]);
         $dashboard->update(['is_active' => true]);
 
+        event(new DashboardActivated($dashboard));
+        
         return $dashboard;
     }
 

@@ -11,12 +11,12 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-class DashboardUpdated implements ShouldBroadcast
+class DashboardActivated implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     public $dashboard;
-    public $widgets;
+
     /**
      * Create a new event instance.
      *
@@ -34,6 +34,6 @@ class DashboardUpdated implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return ["dashboard.{$this->dashboard->id}"];
+        return ['dashboard'];
     }
 }
