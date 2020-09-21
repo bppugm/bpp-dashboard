@@ -33,12 +33,8 @@
           </div>
           <div class="form-group row">
             <label class="col-12" for="">Achievement Values</label>
-            <div class="col-md-8">
-              <select class="form-control" multiple v-model="form.achievement_id">
-                <option :value="achievement.id" v-for="achievement in achievements" :key="achievement.id">
-                  {{ achievement.name }} ({{ achievement.value }}) <code v-if="achievement.automated">automated</code> 
-                </option>
-              </select>
+            <div class="col-md-12">
+              <multiselect v-model="form.achievement_id" :options="achievements" :multiple="true" label="name" track-by="id" :custom-label="customLabel"></multiselect>
               <small class="form-text">
                 You can select multiple value by pressing <code>ctrl</code> button
               </small>
@@ -81,10 +77,14 @@ export default {
   methods: {
     doSave() {
       this.$emit('update:widget', this.form)
+    },
+    customLabel({ name, value, automated }){
+      var automated = automated ? 'automated' : '';
+      return `${name} (${value}) ` + automated
     }
   },
 };
 </script>
-
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
 <style lang="scss" scoped>
 </style>

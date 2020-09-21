@@ -129,7 +129,7 @@ export default {
     getAchievementValues(ids = []) {
       return this.achievements
         .filter(function (item) {
-          return ids.includes(item.id);
+          return ids.map( id => id.id ).includes(item.id);
         })
         .map((item) => item.value);
     },

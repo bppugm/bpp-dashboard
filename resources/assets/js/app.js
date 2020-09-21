@@ -9,6 +9,7 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 import VueGridLayout from "vue-grid-layout";
+import Multiselect from "vue-multiselect";
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -28,6 +29,7 @@ files.keys().map((key) =>
 
 Vue.component("GridLayout", VueGridLayout.GridLayout);
 Vue.component("GridItem", VueGridLayout.GridItem);
+Vue.component("multiselect", Multiselect);
 
 Vue.use(require('vue-moment'));
 
