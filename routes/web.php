@@ -36,7 +36,10 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function ()
     {
         Route::get('/', 'Admin\DashboardController@index')->name('index');
         Route::get('/{dashboard}', 'Admin\DashboardController@show')->name('show');
+        Route::post('/', 'Admin\DashboardController@store')->name('store');
         Route::put('/{dashboard}', 'Admin\DashboardController@update')->name('update');
+        Route::put('/{dashboard}/activate', 'Admin\DashboardController@activate')->name('activate');
+        Route::delete('/{dashboard}', 'Admin\DashboardController@destroy')->name('delete');
     });
 });
 

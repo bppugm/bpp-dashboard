@@ -16,6 +16,7 @@ class CreateDashboardsTable extends Migration
         Schema::create('dashboards', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->nullable();
+            $table->string('description')->nullable();
             $table->json('widgets')->nullable();
             $table->boolean('is_active')->nullable()->default(false);
             $table->timestamps();

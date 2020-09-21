@@ -18,7 +18,14 @@ class DashboardController extends Controller
 
     public function store(Request $request)
     {
-        
+        $data = $request->validate([
+            'name' => 'required|string|max:30|min:3',
+            'description' => 'nullable|string|max:100|min:3'
+        ]);
+
+        $dashboard = Dashboard::create($data);
+
+        return $dashboard;
     }
 
     public function show(Request $request, Dashboard $dashboard)
@@ -31,14 +38,28 @@ class DashboardController extends Controller
     public function update(Dashboard $dashboard, Request $request)
     {
         $data = $request->validate([
-            'name' => 'string|min:5|max:20',
-            'widgets' => 'nullable'
+            'name' => 'string|min:3|max:30',
+            'description' => 'nullable|string|max:100|min:3',
+            'widgets' => 'nullable|array'
         ]);
         
-        $dashboard->update([
-            'widgets' => json_encode($request->widgets)
-        ]);
+        $dashboard->update($data);
 
         return $dashboard->fresh();
+    }
+
+    public function activate(Dashboard $dashboard)
+    {
+        Dashboard::where('is_active', true)->update(['is_active' => false]);
+        $dashboard->update(['is_active' => true]);
+
+        return $dashboard;
+    }
+
+    public function destroy(Dashboard $dashboard)
+    {
+        $dashboard->delete();
+
+        return response(null, 204);
     }
 }

@@ -10,9 +10,10 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $data = Achievement::all();
+        $achievements = Achievement::all();
+        $dashboard = Dashboard::where('is_active', true)->first();
 
-        return view('home.index', compact('data'));
+        return view('home.show', compact('achievements', 'dashboard'));
     }
 
     public function show(Dashboard $dashboard)
