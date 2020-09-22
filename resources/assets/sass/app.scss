@@ -1,8 +1,6 @@
-// Toastr 
-@import "~toastr/toastr";
-
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
 
 // Variables
 @import "variables";
@@ -14,3 +12,6 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+// Toastr 
+@import "~toastr/toastr";

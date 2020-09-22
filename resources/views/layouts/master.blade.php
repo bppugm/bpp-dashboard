@@ -27,7 +27,6 @@
 
     <!-- Dashboard Core -->
     <link href="css/dashboard.css" rel="stylesheet" />
-    <link href="{{ url(mix('css/toastr.css')) }}" rel="stylesheet" />
     <!-- Odometr includes -->
     {{-- <link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-car.css" /> --}}
     {{-- <script src="http://github.hubspot.com/odometer/odometer.js"></script> --}}

@@ -3,7 +3,7 @@
 namespace App\Observers;
 
 use App\Achievement;
-use App\Events\DashboardUpdated;
+use App\Events\AchievementUpdated;
 
 /**
 * Achievement Observer
@@ -13,6 +13,6 @@ class AchievementObserver
     
     public function updated(Achievement $achievement)
     {
-        event(new DashboardUpdated($achievement->append('formatted_updated_at')->toArray()));
+        event(new AchievementUpdated($achievement->append('formatted_updated_at')->toArray()));
     }
 }
