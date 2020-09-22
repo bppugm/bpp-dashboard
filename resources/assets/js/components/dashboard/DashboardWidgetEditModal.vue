@@ -34,7 +34,8 @@
           <div class="form-group row">
             <label class="col-12" for="">Achievement Values</label>
             <div class="col-md-12">
-              <multiselect v-model="form.achievement_id" :options="achievements" :multiple="true" label="name" track-by="id" :custom-label="customLabel"></multiselect>
+              <multiselect v-model="form.achievement_id" :options="achievements" :multiple="true" :clear-on-select="false" label="name" track-by="id" :custom-label="customLabel">
+              </multiselect>
               <small class="form-text">
                 You can select multiple value by pressing <code>ctrl</code> button
               </small>
@@ -81,6 +82,9 @@ export default {
     customLabel({ name, value, automated }){
       var automated = automated ? 'automated' : '';
       return `${name} (${value}) ` + automated
+    },
+    handleSelect(item, id){
+      this.form.achievement_id.push(item)
     }
   },
 };

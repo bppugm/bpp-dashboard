@@ -126,12 +126,12 @@ export default {
       this.editedWidget = key
       $('#editWidget').modal('show')
     },
-    getAchievementValues(ids = []) {
-      return this.achievements
-        .filter(function (item) {
-          return ids.map( id => id.id ).includes(item.id);
-        })
-        .map((item) => item.value);
+    getAchievementValues(values = []) {
+      var achievements = this.achievements
+      return values
+        .map(function (item) {
+          return achievements.find( achievement => achievement.id == item.id ).value
+        });
     },
   },
 };
