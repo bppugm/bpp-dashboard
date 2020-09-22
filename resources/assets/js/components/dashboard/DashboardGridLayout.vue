@@ -9,6 +9,8 @@
       :is-mirrored="false"
       :vertical-compact="true"
       :use-css-transforms="true"
+      :responsive="true" 
+      :col-num="12"
     >
       <grid-item
         class="card card-body d-flex flex-column"
