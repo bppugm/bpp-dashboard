@@ -63,9 +63,6 @@ export default {
     modalTitle: {
       default: "Create a new dashboard",
     },
-    shouldRedirect: {
-      default: true,
-    },
     initialDashboard: Object,
     btnClass: {
       default: "btn btn-primary",
@@ -106,10 +103,8 @@ export default {
           url: this.submitUrl,
           data: this.form,
         });
-        if (this.shouldRedirect) {
-          window.location = `/admin/dashboard/${response.data.id}`;
-          return;
-        }
+        location.reload()
+        return;
       } catch (error) {
         if (error.response.status == 422) {
           this.errors = error.response.data.errors;
