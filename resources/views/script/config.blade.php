@@ -1,6 +1,6 @@
 <script>
   window.config = {
-    pusherAppKey: '{{ env('PUSHER_APP_KEY') }}',
-    pusherAppCluster: '{{ env('PUSHER_APP_CLUSTER') }}',
+    pusherAppKey: '{{ config('broadcasting.connections.pusher.key') }}',
+    pusherAppCluster: '{{ config('broadcasting.connections.pusher.options.cluster') }}',
   }
 </script>

@@ -21,7 +21,7 @@
 
 
     <!-- Generated: 2018-03-27 13:25:03 +0200 -->
-    <title>{{ env('APP_NAME') }}</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="stylesheet" href="font-awesome/css/fontawesome-all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
 
