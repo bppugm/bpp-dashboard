@@ -33,6 +33,6 @@ class ScheduledUpdateController extends Controller
     {
         FailedJob::truncate();
 
-        return redirect()->route('scheduled.index');
+        return redirect()->route('admin.scheduled.index');
     }
 }

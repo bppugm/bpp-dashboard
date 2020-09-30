@@ -15,7 +15,7 @@
         <div class="card">
           <div class="card-header">Achievement data</div>
           <div class="card-body">
-            <form method="POST" action="{{ route('home.update') }}">
+            <form method="POST" action="{{ route('admin.home.update') }}">
               @csrf
               @method('PUT')
               @foreach ($achievements as $achievement)

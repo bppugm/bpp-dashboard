@@ -42,6 +42,6 @@ class HomeController extends Controller
             Achievement::where('name', $key)->first()->update(['value' => $value]);
         }
         
-        return redirect()->route('home')->with('status', 'Update data success');
+        return redirect()->route('admin.home')->with('status', 'Update data success');
     }
 }

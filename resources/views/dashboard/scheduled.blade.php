@@ -12,7 +12,7 @@
           <div class="card-body">
             <scheduled-form-base 
             :initial-achievements="{{ json_encode($achievements) }}"
-            update-url="{{ route('scheduled.update') }}"
+            update-url="{{ route('admin.scheduled.update') }}"
             ></scheduled-form-base>
           </div>
         </div>
@@ -33,7 +33,7 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <form id="deleteSubjectForm" action="{{ route('scheduled.clear') }}" method="POST">
+                <form id="deleteSubjectForm" action="{{ route('admin.scheduled.clear') }}" method="POST">
                   {{ csrf_field() }}
                   <div class="modal-body">
                     Once the list is cleared, it can't be undone.
