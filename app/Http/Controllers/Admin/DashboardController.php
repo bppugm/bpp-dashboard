@@ -13,7 +13,7 @@ class DashboardController extends Controller
 {
     public function index(Request $request)
     {
-        $dashboards = Dashboard::latest()->paginate();
+        $dashboards = Dashboard::orderBy('is_active', 'desc')->paginate();
 
         return view('admin.dashboard.index', compact('dashboards'));
     }

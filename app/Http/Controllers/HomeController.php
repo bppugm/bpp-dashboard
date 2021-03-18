@@ -27,7 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $achievements = Achievement::where('automated', false)->get();
+        $achievements = Achievement::where('automated', false)->orderBy('updated_at', 'desc')->get();
 
         return view('dashboard.index', compact('achievements'));
     }
